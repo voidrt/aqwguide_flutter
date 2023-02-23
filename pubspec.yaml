@@ -1,0 +1,35 @@
+name: travel_seila
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  flutter_map: ^0.14.0
+  google_fonts: ^2.3.1
+  flutter_image_slideshow: ^0.1.2
+  uuid: ^3.0.6
+  flutter_riverpod: ^1.0.4
+  shared_preferences: ^2.0.15
+  circle_flags: ^0.0.3
+  mask_text_input_formatter: ^2.3.0
+  line_icons: ^2.0.1
+  flutter_rating_bar: ^4.0.1
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
