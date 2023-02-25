@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomText extends StatelessWidget {
-  const CustomText({
+class PlainText extends StatelessWidget {
+  const PlainText({
     Key? key,
     required this.titleString,
   }) : super(key: key);
@@ -13,7 +13,7 @@ class CustomText extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: titleString,
-        style: Theme.of(context).textTheme.bodyLarge,
+        style: Theme.of(context).textTheme.bodyMedium,
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:aqwguide/core/routes.dart';
-import 'package:aqwguide/screens/home/home_screen.dart';
-import 'package:aqwguide/themes/app_theme.dart';
+import './core/routes.dart';
+import './screens/home/home_screen.dart';
+import './themes/app_theme.dart';
 
 void main() {
   runApp(const AQWGuide());

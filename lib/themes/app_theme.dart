@@ -24,7 +24,7 @@ class AppTheme {
     textTheme: const TextTheme().copyWith(
       titleLarge: TextStyles.boldTitle,
       labelLarge: TextStyles.labelTitle,
-      bodyMedium: TextStyles.mediumTitle,
+      bodyMedium: TextStyles.title,
       bodySmall: TextStyles.text,
     ),
   );

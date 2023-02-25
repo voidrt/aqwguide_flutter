@@ -1,4 +1,4 @@
-import 'package:aqwguide/themes/colors.dart';
+import '../../themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class TextStyles {
@@ -14,20 +14,14 @@ class TextStyles {
     color: AppColors.textWhite,
   );
 
-  static const TextStyle mediumTitle = TextStyle(
-    fontSize: FontSize.defaultBodySize,
-    fontWeight: FontWeight.w500,
-    color: AppColors.textWhite,
-  );
-
-  static const TextStyle smallTitle = TextStyle(
-    fontSize: FontSize.defaultBodySize,
-    fontWeight: FontWeight.w500,
+  static const TextStyle title = TextStyle(
+    fontSize: FontSize.defaultBody,
+    fontWeight: FontWeight.w400,
     color: AppColors.textWhite,
   );
 
   static const TextStyle text = TextStyle(
-    fontSize: FontSize.defaultBodySize,
+    fontSize: FontSize.defaultBody,
     fontWeight: FontWeight.w300,
     color: AppColors.textWhite,
   );
@@ -36,7 +30,7 @@ class TextStyles {
 class FontSize {
   static const double p = 12;
   static const double m = 14;
-  static const double defaultBodySize = 18;
+  static const double defaultBody = 18;
   static const double defaultTitle = 22;
   static const double g = 28;
   static const double gg = 36;
