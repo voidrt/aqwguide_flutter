@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/home/widgets/home_gridview.dart';
-import 'package:travel_seila/screens/home/widgets/sidemenu.dart';
+import 'package:travel_seila/screens/home/widgets/container_blur/blurred_image.dart';
+import 'package:travel_seila/screens/home/widgets/grid_view/home_gridview.dart';
+import 'package:travel_seila/screens/home/widgets/sidemenu/sidemenu.dart';
 import 'package:travel_seila/themes/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,23 +9,27 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-
     return Scaffold(
       body: LayoutBuilder(
         builder: ((context, constraints) {
-          return Row(
-            children: [
-              SideMenu(
-                deviceSize: mediaQuery.size,
-              ),
-              const VerticalDivider(
-                width: 1,
-                thickness: 1,
-                color: AppColors.textWhite,
-              ),
-              const HomeGridView(),
-            ],
+          return BlurredImageContainer(
+            assetImage: 'Screenshot_211.png',
+            blurLevel: 10,
+            child: Row(
+              children: [
+                SideMenu(
+                  deviceSize: constraints,
+                ),
+                const VerticalDivider(
+                  width: 1,
+                  thickness: 1,
+                  color: AppColors.textWhite,
+                ),
+                HomeGridView(
+                  deviceSize: constraints,
+                ),
+              ],
+            ),
           );
         }),
       ),

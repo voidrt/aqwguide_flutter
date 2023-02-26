@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import './core/routes.dart';
 import './screens/home/home_screen.dart';
 import './themes/app_theme.dart';
 
 void main() {
-  runApp(const AQWGuide());
+  runApp(const ProviderScope(child: AQWGuide()));
 }
 
 class AQWGuide extends StatelessWidget {
