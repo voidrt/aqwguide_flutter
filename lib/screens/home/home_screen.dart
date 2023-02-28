@@ -9,29 +9,31 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: LayoutBuilder(
-        builder: ((context, constraints) {
-          return BlurredImageContainer(
-            assetImage: 'Screenshot_211.png',
-            blurLevel: 10,
-            child: Row(
-              children: [
-                SideMenu(
-                  deviceSize: constraints,
-                ),
-                const VerticalDivider(
-                  width: 1,
-                  thickness: 1,
-                  color: AppColors.textWhite,
-                ),
-                HomeGridView(
-                  deviceSize: constraints,
-                ),
-              ],
-            ),
-          );
-        }),
+    return SafeArea(
+      child: Scaffold(
+        body: BlurredImageContainer(
+          assetImage: 'Screenshot_211.png',
+          blurLevel: 10,
+          child: LayoutBuilder(
+            builder: ((context, constraints) {
+              return Row(
+                children: [
+                  SideMenu(
+                    constraints: constraints,
+                  ),
+                  const VerticalDivider(
+                    width: 1,
+                    thickness: 1,
+                    color: AppColors.textWhite,
+                  ),
+                  HomeGridView(
+                    constraints: constraints,
+                  ),
+                ],
+              );
+            }),
+          ),
+        ),
       ),
     );
   }

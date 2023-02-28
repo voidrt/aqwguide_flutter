@@ -7,16 +7,16 @@ import 'package:travel_seila/themes/text_widgets/aqwg_title.dart';
 class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
-    required this.deviceSize,
+    required this.constraints,
   }) : super(key: key);
 
-  final BoxConstraints deviceSize;
+  final BoxConstraints constraints;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: deviceSize.maxWidth / 5, // good value, apparently
-      height: deviceSize.maxHeight,
+      width: constraints.maxWidth / 5, // good value, apparently
+      height: constraints.maxHeight,
       color: AppColors.primary,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
