@@ -13,10 +13,11 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         body: BlurredImageContainer(
           assetImage: 'Screenshot_211.png',
-          blurLevel: 10,
+          blurLevel: 15,
           child: LayoutBuilder(
             builder: ((context, constraints) {
               return Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SideMenu(
                     constraints: constraints,
@@ -25,6 +26,11 @@ class HomeScreen extends StatelessWidget {
                     width: 1,
                     thickness: 1,
                     color: AppColors.textWhite,
+                  ),
+                  SizedBox(
+                    // don't ask me why.
+                    // it's the only thing that worked
+                    width: constraints.maxWidth / 7,
                   ),
                   HomeGridView(
                     constraints: constraints,

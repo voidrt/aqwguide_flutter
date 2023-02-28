@@ -2,11 +2,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final Provider<List<String>> contentsListProvider = Provider(
   (ref) => [
-    'Home',
-    'Credits',
+    'New Player',
+    'Boost',
     'Farming List',
     'Reputation',
-    'New Player',
+    'Credits',
     'Classes',
     'Items',
     'Story',
