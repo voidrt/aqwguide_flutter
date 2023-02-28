@@ -17,6 +17,7 @@ class AQWGuide extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: Routes.materialRoutes,
       theme: AppTheme.appTheme,
+      title: 'AQW Guide',
       home: const HomeScreen(),
     );
   }

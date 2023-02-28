@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/repository/content_list.dart';
+import 'package:travel_seila/core/repository/content_keys.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class ContentsList extends ConsumerWidget {
@@ -8,7 +8,7 @@ class ContentsList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final contents = ref.watch(contentsListProvider);
+    final contents = ref.watch(topicsStringProvider);
 
     return Expanded(
       child: ListView.builder(
@@ -18,7 +18,7 @@ class ContentsList extends ConsumerWidget {
             contentPadding: const EdgeInsets.symmetric(
               horizontal: PaddingMeasure.gg,
             ),
-            title: Text(contents[index]),
+            title: Text('+ ${contents[index]}'),
           );
         },
       ),
