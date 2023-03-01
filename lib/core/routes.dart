@@ -1,25 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:travel_seila/screens/home/home_screen.dart';
+import 'package:travel_seila/screens/new_player/new_player_screen.dart';
 
 class Routes {
-  static const homeScreen = '/';
+  static const String newPlayer = '/new-player';
+  static const String boost = '/a';
+  static const String farmingList = '/b';
+  static const String reputation = '/c';
+  static const String credits = '/d';
+  static const String classes = '/e';
+  static const String items = '/f';
+  static const String story = '/g';
+  static const String acs = '/h';
+  static const String gold = '/i';
+  static const String boosts = '/j';
+  static const String badges = '/k';
+  static const String acronyms = '/l';
+  static const String enhancing = '/m';
+  static const String nembership = '/n';
+  static const String ultraBosses = '/o';
 
   static Map<String, Widget Function(BuildContext)> materialRoutes = {
-    'New Player': (ctx) => const HomeScreen(),
-    'Boost': (ctx) => const HomeScreen(),
-    'Farming List': (ctx) => const HomeScreen(),
-    'Reputation': (ctx) => const HomeScreen(),
-    'Credits': (ctx) => const HomeScreen(),
-    'Classes': (ctx) => const HomeScreen(),
-    'Items': (ctx) => const HomeScreen(),
-    'Story': (ctx) => const HomeScreen(),
-    'ACs': (ctx) => const HomeScreen(),
-    'Gold': (ctx) => const HomeScreen(),
-    'Boosts': (ctx) => const HomeScreen(),
-    'Badges': (ctx) => const HomeScreen(),
-    'Acronyms': (ctx) => const HomeScreen(),
-    'Enhancing': (ctx) => const HomeScreen(),
-    'Membership': (ctx) => const HomeScreen(),
-    'Ultra Bosses': (ctx) => const HomeScreen(),
+    newPlayer: (ctx) => const NewPlayerScreen(),
+    boost: (ctx) => const HomeScreen(),
+    farmingList: (ctx) => const HomeScreen(),
+    reputation: (ctx) => const HomeScreen(),
+    credits: (ctx) => const HomeScreen(),
+    classes: (ctx) => const HomeScreen(),
+    items: (ctx) => const HomeScreen(),
+    story: (ctx) => const HomeScreen(),
+    acs: (ctx) => const HomeScreen(),
+    gold: (ctx) => const HomeScreen(),
+    boosts: (ctx) => const HomeScreen(),
+    badges: (ctx) => const HomeScreen(),
+    acronyms: (ctx) => const HomeScreen(),
+    enhancing: (ctx) => const HomeScreen(),
+    nembership: (ctx) => const HomeScreen(),
+    ultraBosses: (ctx) => const HomeScreen(),
   };
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class TextStyles {
   static const TextStyle boldTitle = TextStyle(
-    fontSize: FontSize.gg,
+    fontSize: FontSize.exg,
     fontWeight: FontWeight.bold,
     color: AppColors.textWhite,
   );
@@ -34,5 +34,5 @@ class FontSize {
   static const double defaultTitle = 22;
   static const double g = 28;
   static const double gg = 36;
-  static const double exg = 48;
+  static const double exg = 78;
 }

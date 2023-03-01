@@ -25,7 +25,7 @@ class _GridViewItemState extends ConsumerState<GridViewItem> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.pushNamed(context, widget.widgetRoute),
+      onTap: () => Navigator.popAndPushNamed(context, widget.widgetRoute),
       onHover: (hovering) {
         setState(() {
           foregroundColor =

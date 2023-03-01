@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travel_seila/screens/home/widgets/sidemenu/content_list.dart';
+import 'package:travel_seila/screens/home/widgets/text_widgets/aqwg_title.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
-import 'package:travel_seila/themes/text_widgets/aqwg_title.dart';
 
 class SideMenu extends StatefulWidget {
   const SideMenu({

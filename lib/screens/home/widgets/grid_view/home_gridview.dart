@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/repository/content_keys.dart';
-import 'package:travel_seila/core/repository/content_list.dart';
+import 'package:travel_seila/core/repository/topics_properties.dart';
 import 'package:travel_seila/screens/home/widgets/grid_view/gridview_item.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -38,8 +37,8 @@ class AlignedGrid extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final contents = ref.watch(topicsStringProvider);
-    final contentRoutes = ref.watch(topicsRoutesProvider).values;
+    final List<String> contentNames = ref.watch(contentNamesProvider);
+    final List<String> contentRoutes = ref.watch(contentRoutesProvider);
 
     final widgetWidth =
         (constraints.maxWidth - mainAxisSpacing * (columns - 1)) / columns;
@@ -50,11 +49,11 @@ class AlignedGrid extends ConsumerWidget {
         spacing: spacing,
         alignment: WrapAlignment.center,
         children: List.generate(
-          contents.length,
+          contentNames.length,
           (index) {
             return GridViewItem(
-              label: contents[index],
-              widgetRoute: contentRoutes.elementAt(index),
+              label: contentNames[index],
+              widgetRoute: contentRoutes[index],
               width: widgetWidth,
             );
           },

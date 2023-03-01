@@ -9,36 +9,34 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: BlurredImageContainer(
-          assetImage: 'nulgath.png',
-          blurLevel: 10,
-          child: LayoutBuilder(
-            builder: ((context, constraints) {
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SideMenu(
-                    constraints: constraints,
-                  ),
-                  const VerticalDivider(
-                    width: 1,
-                    thickness: 1,
-                    color: AppColors.textWhite,
-                  ),
-                  SizedBox(
-                    // don't ask me why.
-                    // it's the only thing that worked
-                    width: constraints.maxWidth / 7,
-                  ),
-                  HomeGridView(
-                    constraints: constraints,
-                  ),
-                ],
-              );
-            }),
-          ),
+    return Scaffold(
+      body: BlurredImageContainer(
+        assetImage: 'nulgath.png',
+        blurLevel: 10,
+        child: LayoutBuilder(
+          builder: ((context, constraints) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SideMenu(
+                  constraints: constraints,
+                ),
+                const VerticalDivider(
+                  width: 1,
+                  thickness: 1,
+                  color: AppColors.textWhite,
+                ),
+                SizedBox(
+                  // don't ask me why.
+                  // it's the only thing that worked
+                  width: constraints.maxWidth / 7,
+                ),
+                HomeGridView(
+                  constraints: constraints,
+                ),
+              ],
+            );
+          }),
         ),
       ),
     );

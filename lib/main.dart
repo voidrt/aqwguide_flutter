@@ -7,6 +7,11 @@ import './themes/app_theme.dart';
 void main() {
   runApp(const ProviderScope(child: AQWGuide()));
 }
+// ! TEXTO COM LINK AO INVES DE SEI LA
+
+// ? WIDGET DE TEXTO COM LINK CUSTOM
+
+
 
 class AQWGuide extends StatelessWidget {
   const AQWGuide({Key? key}) : super(key: key);
