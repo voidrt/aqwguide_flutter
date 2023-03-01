@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
-class GridViewItem extends ConsumerWidget {
+class GridViewItem extends ConsumerStatefulWidget {
   const GridViewItem({
     Key? key,
     required this.label,
@@ -16,24 +16,43 @@ class GridViewItem extends ConsumerWidget {
   final String widgetRoute;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, widgetRoute),
+  ConsumerState<ConsumerStatefulWidget> createState() => _GridViewItemState();
+}
+
+class _GridViewItemState extends ConsumerState<GridViewItem> {
+  Color foregroundColor = AppColors.textWhite;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => Navigator.pushNamed(context, widget.widgetRoute),
+      onHover: (hovering) {
+        setState(() {
+          foregroundColor =
+              hovering ? AppColors.secondary : AppColors.textWhite;
+        });
+      },
       child: Container(
-        width: width,
+        width: widget.width,
         padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.pp),
         decoration: BoxDecoration(
           color: Colors.white10,
           border: Border.all(
             width: 1,
-            color: AppColors.textWhite,
+            color: foregroundColor,
           ),
           borderRadius: BorderRadius.circular(5),
         ),
         child: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: PaddingMeasure.pp),
-            child: Text(label, textAlign: TextAlign.center),
+            child: Text(
+              widget.label,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: foregroundColor,
+                  ),
+            ),
           ),
         ),
       ),

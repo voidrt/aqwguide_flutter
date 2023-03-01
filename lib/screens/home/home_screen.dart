@@ -12,8 +12,8 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: BlurredImageContainer(
-          assetImage: 'Screenshot_211.png',
-          blurLevel: 15,
+          assetImage: 'nulgath.png',
+          blurLevel: 10,
           child: LayoutBuilder(
             builder: ((context, constraints) {
               return Row(

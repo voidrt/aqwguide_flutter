@@ -4,7 +4,7 @@ import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 import 'package:travel_seila/themes/text_widgets/aqwg_title.dart';
 
-class SideMenu extends StatelessWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({
     Key? key,
     required this.constraints,
@@ -13,10 +13,15 @@ class SideMenu extends StatelessWidget {
   final BoxConstraints constraints;
 
   @override
+  State<SideMenu> createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  @override
   Widget build(BuildContext context) {
     return Container(
-      width: constraints.maxWidth / 5, // good value, apparently
-      height: constraints.maxHeight,
+      width: widget.constraints.maxWidth / 5, // good value, apparently
+      height: widget.constraints.maxHeight,
       color: AppColors.primary,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
