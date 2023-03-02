@@ -32,7 +32,7 @@ class FontSize {
   static const double m = 14;
   static const double defaultBody = 18;
   static const double defaultTitle = 22;
-  static const double g = 28;
+  static const double g = 26;
   static const double gg = 36;
   static const double exg = 78;
 }

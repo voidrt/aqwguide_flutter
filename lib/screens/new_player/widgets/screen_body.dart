@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_seila/screens/new_player/widgets/expanding_text_paragraph.dart';
 import 'package:travel_seila/themes/colors.dart';
+import 'package:travel_seila/themes/paddings.dart';
 
 class ScreenBody extends StatelessWidget {
   const ScreenBody({
@@ -14,6 +16,15 @@ class ScreenBody extends StatelessWidget {
     return Expanded(
       child: Container(
         color: AppColors.background,
+        alignment: Alignment.topCenter,
+        child: Column(
+          children: const [
+            SizedBox(
+              height: PaddingMeasure.g * 1.5,
+            ),
+            ExpandingTextParagraph(paragraphTitle: 'Information'),
+          ],
+        ),
       ),
     );
   }

@@ -12,22 +12,19 @@ class AqwgTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          margin: const EdgeInsets.symmetric(
-            vertical: PaddingMeasure.gg,
-            horizontal: PaddingMeasure.defaultSize,
-          ),
-          child: Text(
-            titleString,
-            style: Theme.of(context)
-                .textTheme
-                .bodyMedium!
-                .copyWith(fontSize: FontSize.g),
-          ),
-        ),
-      ],
+    return Container(
+      color: Colors.transparent,
+      margin: const EdgeInsets.symmetric(
+        vertical: PaddingMeasure.gg,
+        horizontal: PaddingMeasure.p,
+      ),
+      child: Text(
+        titleString,
+        style: Theme.of(context)
+            .textTheme
+            .bodyMedium!
+            .copyWith(fontSize: FontSize.g),
+      ),
     );
   }
 }
