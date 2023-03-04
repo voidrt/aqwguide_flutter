@@ -22,7 +22,16 @@ class ScreenBody extends StatelessWidget {
             SizedBox(
               height: PaddingMeasure.g * 1.5,
             ),
-            ExpandingTextParagraph(paragraphTitle: 'Information'),
+            ExpandingTextParagraph(
+              paragraphTitle: 'Information',
+              labels: ['Tips'],
+              paragraphs: [
+                'asdasdasda',
+                'asdasdadasda',
+                'asdasdasdasdasdasdasdasdasdasdas',
+                'adadadasdasdasdas'
+              ],
+            ),
           ],
         ),
       ),

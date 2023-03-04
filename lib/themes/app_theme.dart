@@ -21,11 +21,21 @@ class AppTheme {
         color: AppColors.black,
       ),
     ),
+    expansionTileTheme: const ExpansionTileThemeData(
+      collapsedIconColor: AppColors.textWhite,
+      iconColor: AppColors.textWhite,
+      expandedAlignment: Alignment.centerLeft,
+      tilePadding: EdgeInsets.zero,
+    ),
     textTheme: const TextTheme().copyWith(
       titleLarge: TextStyles.boldTitle,
       labelLarge: TextStyles.labelTitle,
       bodyMedium: TextStyles.title,
       bodySmall: TextStyles.text,
+    ),
+    dividerTheme: const DividerThemeData(
+      thickness: 0.5,
+      color: AppColors.textWhite,
     ),
   );
 }

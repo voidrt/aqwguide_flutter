@@ -1,46 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/themes/colors.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:travel_seila/screens/home/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/screens/new_player/widgets/unordered_list.dart';
 import 'package:travel_seila/themes/paddings.dart';
-import 'package:travel_seila/themes/text_themes.dart';
 
-class ExpandingTextParagraph extends StatelessWidget {
+class ExpandingTextParagraph extends ConsumerStatefulWidget {
   const ExpandingTextParagraph({
     Key? key,
     required this.paragraphTitle,
+    required this.labels,
+    required this.paragraphs,
   }) : super(key: key);
 
   final String paragraphTitle;
+  final List<String> labels;
+  final List<String> paragraphs;
 
+  @override
+  ConsumerState<ExpandingTextParagraph> createState() =>
+      _ExpandingTextParagraphState();
+}
+
+class _ExpandingTextParagraphState
+    extends ConsumerState<ExpandingTextParagraph> {
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg),
       child: Column(
         children: [
-          ListTile(
-            title: Text(
-              paragraphTitle,
-              style: Theme.of(context)
-                  .textTheme
-                  .labelLarge!
-                  .copyWith(fontSize: FontSize.g),
-            ),
-            trailing: const Icon(
-              Icons.arrow_drop_down_sharp,
-              color: AppColors.textWhite,
-              size: 40,
-            ),
-          ),
-          const SizedBox(
-            height: PaddingMeasure.m,
+          ExpansionTile(
+            title: LabelText(titleString: widget.paragraphTitle),
+            children: [
+              UnorderedList(
+                title: widget.labels[0],
+                paragraphs: widget.paragraphs,
+              ),
+            ],
           ),
           const Divider(
             thickness: 0.5,
             height: 1,
-            indent: 15,
-            endIndent: 15,
-            color: AppColors.textWhite,
-          )
+          ),
         ],
       ),
     );

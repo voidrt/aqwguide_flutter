@@ -9,7 +9,7 @@ class TextStyles {
   );
 
   static const TextStyle labelTitle = TextStyle(
-    fontSize: FontSize.defaultTitle,
+    fontSize: FontSize.g,
     fontWeight: FontWeight.w600,
     color: AppColors.textWhite,
   );
@@ -28,8 +28,8 @@ class TextStyles {
 }
 
 class FontSize {
-  static const double p = 12;
-  static const double m = 14;
+  static const double p = 8;
+  static const double m = 12;
   static const double defaultBody = 18;
   static const double defaultTitle = 22;
   static const double g = 26;
