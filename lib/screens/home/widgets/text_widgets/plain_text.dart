@@ -16,7 +16,7 @@ class PlainText extends StatelessWidget {
       child: RichText(
         text: TextSpan(
           text: titleString,
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: Theme.of(context).textTheme.bodySmall,
         ),
       ),
     );

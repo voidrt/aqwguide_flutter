@@ -26,7 +26,7 @@ class _ExpandingTextParagraphState
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg),
+      margin: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg * 2),
       child: Column(
         children: [
           ExpansionTile(

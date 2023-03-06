@@ -16,20 +16,20 @@ class TextStyles {
 
   static const TextStyle title = TextStyle(
     fontSize: FontSize.defaultBody,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     color: AppColors.textWhite,
   );
 
   static const TextStyle text = TextStyle(
-    fontSize: FontSize.defaultBody,
-    fontWeight: FontWeight.w300,
+    fontSize: FontSize.defaultBody - 1,
+    fontWeight: FontWeight.w400,
     color: AppColors.textWhite,
   );
 }
 
 class FontSize {
   static const double p = 8;
-  static const double m = 12;
+  static const double m = 16;
   static const double defaultBody = 18;
   static const double defaultTitle = 22;
   static const double g = 26;
