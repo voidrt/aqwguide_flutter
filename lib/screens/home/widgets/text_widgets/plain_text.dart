@@ -14,6 +14,7 @@ class PlainText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: PaddingMeasure.exg),
       child: RichText(
+        textAlign: TextAlign.justify,
         text: TextSpan(
           text: titleString,
           style: Theme.of(context).textTheme.bodySmall,
