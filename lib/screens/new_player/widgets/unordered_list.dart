@@ -39,7 +39,8 @@ class UnorderedList extends StatelessWidget {
               ),
               horizontalTitleGap: PaddingMeasure.pp - 20,
               title: PlainText(
-                titleString: paragraphs[index],
+                string: paragraphs[index],
+                isInParagraph: true,
               ),
             );
           },

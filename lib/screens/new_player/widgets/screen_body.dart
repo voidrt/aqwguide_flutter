@@ -18,15 +18,20 @@ class ScreenBody extends ConsumerWidget {
       child: Container(
         color: AppColors.background,
         alignment: Alignment.topCenter,
-        child: SingleChildScrollView(
-          child: Column(
-            children: const [
-              SizedBox(
-                height: PaddingMeasure.g * 1.5,
-              ),
-              ExpandingTextParagraph(),
-            ],
-          ),
+        child: Column(
+          children: const [
+            SizedBox(
+              height: PaddingMeasure.g * 1.5,
+            ),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+            ExpandingTextParagraph(),
+          ],
         ),
       ),
     );

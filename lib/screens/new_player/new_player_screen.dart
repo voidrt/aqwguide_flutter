@@ -18,14 +18,13 @@ class NewPlayerScreen extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SideMenu(constraints: constraints),
+              const SideMenu(),
               const VerticalDivider(
                 width: 1,
                 thickness: 1,
                 color: AppColors.textWhite,
               ),
-              SizedBox(
-                width: constraints.maxWidth - 1 - (constraints.maxWidth / 5),
+              Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [

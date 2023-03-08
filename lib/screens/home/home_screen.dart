@@ -10,17 +10,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: BlurredImageContainer(
         assetImage: 'nulgath.png',
         blurLevel: 10,
         child: LayoutBuilder(
           builder: ((context, constraints) {
             return Row(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SideMenu(
-                  constraints: constraints,
-                ),
+                SideMenu(),
                 const VerticalDivider(
                   width: 1,
                   thickness: 1,

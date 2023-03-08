@@ -4,19 +4,21 @@ import 'package:travel_seila/themes/paddings.dart';
 class PlainText extends StatelessWidget {
   const PlainText({
     Key? key,
-    required this.titleString,
+    required this.string,
+    required this.isInParagraph,
   }) : super(key: key);
 
-  final String titleString;
+  final bool isInParagraph;
+  final String string;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: PaddingMeasure.exg),
+      padding: EdgeInsets.only(right: isInParagraph ? PaddingMeasure.exg : 0),
       child: RichText(
         textAlign: TextAlign.justify,
         text: TextSpan(
-          text: titleString,
+          text: string,
           style: Theme.of(context).textTheme.bodySmall,
         ),
       ),
