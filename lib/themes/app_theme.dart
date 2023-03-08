@@ -4,8 +4,10 @@ import 'colors.dart';
 import 'text_themes.dart';
 
 class AppTheme {
-  static var appTheme = ThemeData().copyWith(
+  static var appTheme = ThemeData(
+    fontFamily: 'Montserrat',
     useMaterial3: true,
+    platform: TargetPlatform.windows,
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.background,
     unselectedWidgetColor: Colors.white.withOpacity(0.67),

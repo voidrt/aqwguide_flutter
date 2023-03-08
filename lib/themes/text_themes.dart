@@ -9,7 +9,7 @@ class TextStyles {
   );
 
   static const TextStyle labelTitle = TextStyle(
-    fontSize: FontSize.g,
+    fontSize: FontSize.defaultTitle + 2,
     fontWeight: FontWeight.w600,
     color: AppColors.textWhite,
   );

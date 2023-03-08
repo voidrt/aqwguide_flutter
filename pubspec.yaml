@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^2.3.1
+  google_fonts: ^4.0.3
   flutter_image_slideshow: ^0.1.2
   flutter_riverpod: ^1.0.4
   shared_preferences: ^2.0.15
@@ -27,3 +27,16 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/fonts/
+  fonts:
+  - family: Montserrat
+    fonts:
+      - asset: assets/fonts/Montserrat-Light.ttf
+        weight: 400
+      - asset: assets/fonts/Montserrat-Regular.ttf
+        weight: 500
+      - asset: assets/fonts/Montserrat-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Montserrat-BoldItalic.ttf
+        style: italic
+  
