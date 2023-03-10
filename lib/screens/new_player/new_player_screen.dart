@@ -18,7 +18,9 @@ class NewPlayerScreen extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const SideMenu(),
+              SideMenu(
+                constraints: constraints,
+              ),
               const VerticalDivider(
                 width: 1,
                 thickness: 1,

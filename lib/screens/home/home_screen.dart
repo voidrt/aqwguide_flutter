@@ -18,7 +18,9 @@ class HomeScreen extends StatelessWidget {
           builder: ((context, constraints) {
             return Row(
               children: [
-                SideMenu(),
+                SideMenu(
+                  constraints: constraints,
+                ),
                 const VerticalDivider(
                   width: 1,
                   thickness: 1,
