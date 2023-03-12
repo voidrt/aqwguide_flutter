@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/home/widgets/container_blur/blurred_image.dart';
-import 'package:travel_seila/screens/home/widgets/grid_view/home_gridview.dart';
-import 'package:travel_seila/screens/home/widgets/sidemenu/sidemenu.dart';
+
+import 'package:travel_seila/screens/home/grid_view/home_gridview.dart';
+import 'package:travel_seila/screens/widgets/container_blur/blurred_image.dart';
+import 'package:travel_seila/screens/widgets/sidemenu/sidemenu.dart';
+
 import 'package:travel_seila/themes/colors.dart';
 
 class HomeScreen extends StatelessWidget {

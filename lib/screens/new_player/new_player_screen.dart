@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/home/widgets/container_blur/blurred_image.dart';
-import 'package:travel_seila/screens/home/widgets/sidemenu/sidemenu.dart';
-import 'package:travel_seila/screens/home/widgets/text_widgets/page_name.dart';
 import 'package:travel_seila/screens/new_player/widgets/screen_body.dart';
+import 'package:travel_seila/screens/widgets/container_blur/blurred_image.dart';
+import 'package:travel_seila/screens/widgets/sidemenu/sidemenu.dart';
+import 'package:travel_seila/screens/widgets/text_widgets/page_name.dart';
 import 'package:travel_seila/themes/colors.dart';
 
 class NewPlayerScreen extends StatelessWidget {

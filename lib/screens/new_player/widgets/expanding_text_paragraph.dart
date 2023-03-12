@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:travel_seila/core/repository/new_player_info.dart';
-import 'package:travel_seila/screens/home/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/screens/widgets/text_widgets/label_text.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class ExpandingTextParagraph extends ConsumerStatefulWidget {

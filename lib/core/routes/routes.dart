@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:travel_seila/screens/home/home_screen.dart';
-import 'package:travel_seila/screens/home/widgets/sidemenu/sidemenu.dart';
+import 'package:travel_seila/screens/widgets/sidemenu/sidemenu.dart';
 
 class Routes {
   static GoRouter appRouter = GoRouter(
