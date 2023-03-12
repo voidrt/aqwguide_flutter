@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -25,13 +26,7 @@ class _GridViewItemState extends ConsumerState<GridViewItem> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.popAndPushNamed(context, widget.widgetRoute),
-      onHover: (hovering) {
-        setState(() {
-          foregroundColor =
-              hovering ? AppColors.secondary : AppColors.textWhite;
-        });
-      },
+      onTap: () => context.goNamed(widget.widgetRoute),
       child: Container(
         width: widget.width,
         padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.pp),

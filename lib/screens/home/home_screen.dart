@@ -11,16 +11,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: BlurredImageContainer(
-        assetImage: 'nulgath.png',
-        blurLevel: 10,
-        child: LayoutBuilder(
-          builder: ((context, constraints) {
-            return Row(
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          return BlurredImageContainer(
+            assetImage: 'nulgath.png',
+            blurLevel: 10,
+            constraints: constraints,
+            child: Row(
               children: [
-                SideMenu(
-                  constraints: constraints,
-                ),
+                const SideMenu(),
                 const VerticalDivider(
                   width: 1,
                   thickness: 1,
@@ -35,9 +34,9 @@ class HomeScreen extends StatelessWidget {
                   constraints: constraints,
                 ),
               ],
-            );
-          }),
-        ),
+            ),
+          );
+        },
       ),
     );
   }

@@ -7,11 +7,13 @@ class BlurredImageContainer extends StatelessWidget {
     Key? key,
     required this.child,
     required this.assetImage,
+    required this.constraints,
     this.blurLevel,
   }) : super(key: key);
 
   final String assetImage;
   final Widget child;
+  final BoxConstraints constraints;
   final double? blurLevel;
 
   @override
@@ -35,7 +37,7 @@ class BlurredImageContainer extends StatelessWidget {
               ),
             ),
           ),
-          child,
+          child
         ],
       ),
     );

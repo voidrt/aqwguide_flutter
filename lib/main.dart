@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:travel_seila/core/routes/routes.dart';
-import 'core/routes/routes.dart';
-import './screens/home/home_screen.dart';
 import './themes/app_theme.dart';
 
 void main() {
@@ -17,12 +15,11 @@ class AQWGuide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routes: Routes.materialRoutes,
       theme: AppTheme.appTheme,
+      routerConfig: Routes.appRouter,
       title: 'AQW Guide',
-      home: const HomeScreen(),
     );
   }
 }

@@ -14,25 +14,23 @@ class ScreenBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Expanded(
-      child: Container(
-        color: AppColors.background,
-        alignment: Alignment.topCenter,
-        child: Column(
-          children: const [
-            SizedBox(
-              height: PaddingMeasure.g * 1.5,
-            ),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-            ExpandingTextParagraph(),
-          ],
-        ),
+    return Container(
+      color: AppColors.background,
+      alignment: Alignment.topCenter,
+      child: Column(
+        children: const [
+          SizedBox(
+            height: PaddingMeasure.g * 1.5,
+          ),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+          ExpandingTextParagraph(),
+        ],
       ),
     );
   }

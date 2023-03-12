@@ -9,10 +9,7 @@ import 'package:travel_seila/themes/colors.dart';
 class SideMenu extends ConsumerStatefulWidget {
   const SideMenu({
     Key? key,
-    required this.constraints,
   }) : super(key: key);
-
-  final BoxConstraints constraints;
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _SideMenuState();
@@ -26,11 +23,14 @@ class _SideMenuState extends ConsumerState<SideMenu> {
     BuildContext context,
   ) {
     final List<String> contentNames = ref.watch(contentNamesProvider);
+    final Size mediaQuerySize = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
       controller: AdjustableScrollController(),
       child: ConstrainedBox(
-        constraints: BoxConstraints(minHeight: widget.constraints.maxHeight),
+        constraints: BoxConstraints(
+          minHeight: mediaQuerySize.height,
+        ),
         child: IntrinsicHeight(
           child: NavigationRail(
             backgroundColor: AppColors.primary,

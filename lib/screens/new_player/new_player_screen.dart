@@ -13,33 +13,30 @@ class NewPlayerScreen extends StatelessWidget {
     return Scaffold(
       body: LayoutBuilder(builder: (context, constraints) {
         return BlurredImageContainer(
-          assetImage: 'fantasy 1.png',
-          blurLevel: 5,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SideMenu(
-                constraints: constraints,
-              ),
-              const VerticalDivider(
-                width: 1,
-                thickness: 1,
-                color: AppColors.textWhite,
-              ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    const PageTitle(titleString: 'New Player'),
-                    ScreenBody(
-                      constraints: constraints,
-                    )
-                  ],
+            assetImage: 'fantasy 1.png',
+            blurLevel: 5,
+            constraints: constraints,
+            child: Row(
+              children: [
+                const SideMenu(),
+                const VerticalDivider(
+                  width: 1,
+                  thickness: 1,
+                  color: AppColors.textWhite,
                 ),
-              )
-            ],
-          ),
-        );
+                Expanded(
+                  flex: 4,
+                  child: Column(
+                    children: [
+                      const PageTitle(titleString: 'New Player'),
+                      ScreenBody(
+                        constraints: constraints,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ));
       }),
     );
   }
