@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/new_player/widgets/screen_body.dart';
+import 'package:travel_seila/screens/new_player/widgets/expanding_text_paragraph.dart';
+import 'package:travel_seila/screens/new_player/widgets/generic_page_layout.dart';
 import 'package:travel_seila/screens/widgets/scaffold_custom/scaffold_custom.dart';
-import 'package:travel_seila/screens/widgets/text_widgets/page_name.dart';
 
 class NewPlayerScreen extends StatelessWidget {
   const NewPlayerScreen({Key? key}) : super(key: key);
@@ -15,15 +15,15 @@ class NewPlayerScreen extends StatelessWidget {
           expandedFlex: 4,
           backgroundImage: 'fantasy 1.png',
           backgroundImageBlur: 5,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const PageTitle(titleString: 'New Player'),
-                ScreenBody(
-                  constraints: constraints,
-                ),
-              ],
-            ),
+          child: GenericPageLayout(
+            title: 'New PLayer',
+            constraints: constraints,
+            paragraphs: const [
+              ExpandingTextParagraph(),
+              ExpandingTextParagraph(),
+              ExpandingTextParagraph(),
+              ExpandingTextParagraph(),
+            ],
           ),
         );
       },

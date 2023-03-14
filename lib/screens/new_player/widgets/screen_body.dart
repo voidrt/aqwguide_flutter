@@ -8,9 +8,11 @@ class ScreenBody extends ConsumerWidget {
   const ScreenBody({
     Key? key,
     required this.constraints,
+    required this.paragraphs,
   }) : super(key: key);
 
   final BoxConstraints constraints;
+  final List<ExpandingTextParagraph> paragraphs;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,18 +20,11 @@ class ScreenBody extends ConsumerWidget {
       color: AppColors.background,
       alignment: Alignment.topCenter,
       child: Column(
-        children: const [
-          SizedBox(
+        children: [
+          const SizedBox(
             height: PaddingMeasure.g * 1.5,
           ),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
-          ExpandingTextParagraph(),
+          ...paragraphs
         ],
       ),
     );
