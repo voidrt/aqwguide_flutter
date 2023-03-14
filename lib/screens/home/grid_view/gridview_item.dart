@@ -27,6 +27,10 @@ class _GridViewItemState extends ConsumerState<GridViewItem> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => context.goNamed(widget.widgetRoute),
+      onHover: (hovering) => setState(
+        () => foregroundColor =
+            hovering ? AppColors.secondary : AppColors.textWhite,
+      ),
       child: Container(
         width: widget.width,
         padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.pp),

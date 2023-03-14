@@ -11,9 +11,9 @@ class BlurredImageContainer extends StatelessWidget {
     this.blurLevel,
   }) : super(key: key);
 
-  final String assetImage;
   final Widget child;
   final BoxConstraints constraints;
+  final String? assetImage;
   final double? blurLevel;
 
   @override
@@ -22,7 +22,9 @@ class BlurredImageContainer extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/$assetImage'),
+          image: AssetImage(
+            'assets/${assetImage ?? 'nulgath.png'}',
+          ),
           fit: BoxFit.cover,
         ),
       ),
@@ -30,7 +32,9 @@ class BlurredImageContainer extends StatelessWidget {
         children: [
           BackdropFilter(
             filter: ImageFilter.blur(
-                sigmaX: blurLevel ?? 5, sigmaY: blurLevel ?? 5),
+              sigmaX: blurLevel ?? 5,
+              sigmaY: blurLevel ?? 5,
+            ),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.0),

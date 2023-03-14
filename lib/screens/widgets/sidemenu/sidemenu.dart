@@ -4,6 +4,7 @@ import 'package:travel_seila/core/repository/topics_properties.dart';
 import 'package:travel_seila/screens/widgets/scroll_physics.dart/ajustable_scroll.dart';
 import 'package:travel_seila/screens/widgets/text_widgets/aqwg_title.dart';
 import 'package:travel_seila/screens/widgets/text_widgets/plain_text.dart';
+
 import 'package:travel_seila/themes/colors.dart';
 
 class SideMenu extends ConsumerStatefulWidget {

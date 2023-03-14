@@ -1,45 +1,33 @@
 import 'package:flutter/material.dart';
 
 import 'package:travel_seila/screens/home/grid_view/home_gridview.dart';
-import 'package:travel_seila/screens/widgets/container_blur/blurred_image.dart';
-import 'package:travel_seila/screens/widgets/sidemenu/sidemenu.dart';
-
-import 'package:travel_seila/themes/colors.dart';
+import 'package:travel_seila/screens/widgets/scaffold_custom/scaffold_custom.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          return BlurredImageContainer(
-            assetImage: 'nulgath.png',
-            blurLevel: 10,
-            constraints: constraints,
-            child: Row(
+    return SafeArea(
+      child: LayoutBuilder(builder: (context, constraints) {
+        // nao pergunta o pq
+        final gridViewCenterPadding = constraints.maxWidth / 7;
+        //foi a unica coisa que funcionou
+        return ScaffoldWithSideMenu(
+          constraints: constraints,
+          child: SizedBox(
+            width: gridViewCenterPadding,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SideMenu(),
-                const VerticalDivider(
-                  width: 1,
-                  thickness: 1,
-                  color: AppColors.textWhite,
-                ),
-                SizedBox(
-                  // don't ask me why.
-                  // it's the only thing that worked
-                  width: constraints.maxWidth / 7,
-                ),
                 HomeGridView(
                   constraints: constraints,
                 ),
               ],
             ),
-          );
-        },
-      ),
+          ),
+        );
+      }),
     );
   }
 }
