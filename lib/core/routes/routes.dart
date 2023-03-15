@@ -16,6 +16,11 @@ class Routes {
         path: '/new-player',
         builder: (context, state) => const NewPlayerScreen(),
       ),
+      GoRoute(
+        name: 'boost',
+        path: '/boost',
+        builder: (context, state) => const HomeScreen(),
+      ),
     ],
   );
 }

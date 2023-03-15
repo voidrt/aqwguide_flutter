@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:travel_seila/core/repository/topics_properties.dart';
 import 'package:travel_seila/screens/widgets/scroll_physics.dart/ajustable_scroll.dart';
 import 'package:travel_seila/screens/widgets/text_widgets/aqwg_title.dart';
@@ -8,17 +9,18 @@ import 'package:travel_seila/screens/widgets/text_widgets/plain_text.dart';
 import 'package:travel_seila/themes/colors.dart';
 
 class SideMenu extends ConsumerStatefulWidget {
-  const SideMenu({
+  SideMenu({
     Key? key,
+    this.selectedIndex = 0,
   }) : super(key: key);
+
+  int selectedIndex;
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _SideMenuState();
 }
 
 class _SideMenuState extends ConsumerState<SideMenu> {
-  int _selectedIndex = 0;
-
   @override
   Widget build(
     BuildContext context,
@@ -37,19 +39,22 @@ class _SideMenuState extends ConsumerState<SideMenu> {
             backgroundColor: AppColors.primary,
             extended: true,
             elevation: 1,
-            selectedIndex: _selectedIndex,
+            selectedIndex: widget.selectedIndex,
             groupAlignment: -1,
             indicatorColor: AppColors.secondary,
             onDestinationSelected: (int index) {
               setState(() {
-                _selectedIndex = index;
+                widget.selectedIndex = index;
               });
             },
             leading: Column(
               mainAxisSize: MainAxisSize.min,
-              children: const [
-                AqwgTitle(titleString: 'AQWG'),
-                Divider(
+              children: [
+                GestureDetector(
+                  onTap: () => context.goNamed('home'),
+                  child: const AqwgTitle(titleString: 'AQWG'),
+                ),
+                const Divider(
                   thickness: 0.5,
                   height: 1,
                   indent: 15,

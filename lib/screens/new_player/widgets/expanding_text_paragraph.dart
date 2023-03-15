@@ -7,7 +7,9 @@ import 'package:travel_seila/themes/paddings.dart';
 class ExpandingTextParagraph extends ConsumerStatefulWidget {
   const ExpandingTextParagraph({
     Key? key,
+    required this.title,
   }) : super(key: key);
+  final String title;
 
   @override
   ConsumerState<ExpandingTextParagraph> createState() =>
@@ -25,12 +27,17 @@ class _ExpandingTextParagraphState
       child: Column(
         children: [
           ExpansionTile(
-            title: LabelText(titleString: info.keys.elementAt(0)),
+            title: LabelText(
+              titleString: widget.title,
+            ),
             children: const [],
           ),
-          const Divider(
-            thickness: 0.5,
-            height: 1,
+          const Padding(
+            padding: EdgeInsets.only(bottom: PaddingMeasure.exg),
+            child: Divider(
+              thickness: 0.5,
+              height: 1,
+            ),
           ),
         ],
       ),

@@ -15,14 +15,26 @@ class NewPlayerScreen extends StatelessWidget {
           expandedFlex: 4,
           backgroundImage: 'fantasy 1.png',
           backgroundImageBlur: 5,
+          pageIndex: 1,
           child: GenericPageLayout(
-            title: 'New PLayer',
+            title: 'New Player',
             constraints: constraints,
             paragraphs: const [
-              ExpandingTextParagraph(),
-              ExpandingTextParagraph(),
-              ExpandingTextParagraph(),
-              ExpandingTextParagraph(),
+              ExpandingTextParagraph(
+                title: 'Information',
+              ),
+              ExpandingTextParagraph(
+                title: 'Classes',
+              ),
+              ExpandingTextParagraph(
+                title: 'Items',
+              ),
+              ExpandingTextParagraph(
+                title: 'XP',
+              ),
+              ExpandingTextParagraph(
+                title: 'Acronyms',
+              ),
             ],
           ),
         );

@@ -11,6 +11,7 @@ class ScaffoldWithSideMenu extends StatelessWidget {
     this.backgroundImage,
     this.backgroundImageBlur,
     this.expandedFlex,
+    this.pageIndex,
   }) : super(key: key);
 
   final Widget child;
@@ -18,6 +19,7 @@ class ScaffoldWithSideMenu extends StatelessWidget {
   final String? backgroundImage;
   final double? backgroundImageBlur;
   final int? expandedFlex;
+  final int? pageIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,9 @@ class ScaffoldWithSideMenu extends StatelessWidget {
         constraints: constraints,
         child: Row(
           children: [
-            const SideMenu(),
+            SideMenu(
+              selectedIndex: pageIndex ?? 0,
+            ),
             const VerticalDivider(
               width: 1,
               thickness: 1,
