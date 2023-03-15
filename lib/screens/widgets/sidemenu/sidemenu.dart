@@ -26,6 +26,7 @@ class _SideMenuState extends ConsumerState<SideMenu> {
     BuildContext context,
   ) {
     final List<String> contentNames = ref.watch(contentNamesProvider);
+    final List<String> contentRoutes = ref.watch(contentRoutesProvider);
     final Size mediaQuerySize = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
@@ -45,12 +46,16 @@ class _SideMenuState extends ConsumerState<SideMenu> {
             onDestinationSelected: (int index) {
               setState(() {
                 widget.selectedIndex = index;
+                index == 0
+                    ? context.go('/')
+                    : context.goNamed(contentRoutes[index - 1]);
               });
             },
             leading: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                GestureDetector(
+                InkWell(
+                  overlayColor: MaterialStateProperty.all(AppColors.primary),
                   onTap: () => context.goNamed('home'),
                   child: const AqwgTitle(titleString: 'AQWG'),
                 ),
