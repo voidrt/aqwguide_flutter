@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/new_player/widgets/expanding_text_paragraph.dart';
+import 'package:travel_seila/screens/new_player/widgets/expanding_text_widget.dart';
 import 'package:travel_seila/screens/new_player/widgets/screen_body.dart';
 import 'package:travel_seila/screens/widgets/text_widgets/page_name.dart';
 
@@ -13,7 +13,7 @@ class GenericPageLayout extends StatelessWidget {
 
   final String title;
   final BoxConstraints constraints;
-  final List<ExpandingTextParagraph> paragraphs;
+  final List<ExpandingTextWidget> paragraphs;
 
   @override
   Widget build(BuildContext context) {

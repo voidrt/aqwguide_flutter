@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_seila/themes/paddings.dart';
 //---------------------------------------------
 import 'colors.dart';
 import 'text_themes.dart';
@@ -15,6 +16,16 @@ class AppTheme {
       centerTitle: true,
       elevation: 3,
       toolbarHeight: 50,
+    ),
+    listTileTheme: const ListTileThemeData().copyWith(
+      contentPadding: const EdgeInsets.symmetric(
+        vertical: PaddingMeasure.pp,
+      ),
+      enableFeedback: false,
+      horizontalTitleGap: PaddingMeasure.pp - 20,
+    ),
+    iconTheme: const IconThemeData().copyWith(
+      color: AppColors.textWhite,
     ),
     inputDecorationTheme: const InputDecorationTheme().copyWith(
       focusColor: AppColors.black,

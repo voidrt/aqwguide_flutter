@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/new_player/widgets/expanding_text_paragraph.dart';
-import 'package:travel_seila/screens/new_player/widgets/generic_page_layout.dart';
+import 'package:travel_seila/screens/new_player/widgets/expanding_text_widget.dart';
+import 'package:travel_seila/screens/new_player/widgets/generic_page_layout/generic_page_layout.dart';
 import 'package:travel_seila/screens/widgets/scaffold_custom/scaffold_custom.dart';
 
 class NewPlayerScreen extends StatelessWidget {
@@ -20,20 +20,14 @@ class NewPlayerScreen extends StatelessWidget {
             title: 'New Player',
             constraints: constraints,
             paragraphs: const [
-              ExpandingTextParagraph(
+              ExpandingTextWidget(
                 title: 'Information',
               ),
-              ExpandingTextParagraph(
-                title: 'Classes',
+              ExpandingTextWidget(
+                title: 'Information',
               ),
-              ExpandingTextParagraph(
-                title: 'Items',
-              ),
-              ExpandingTextParagraph(
-                title: 'XP',
-              ),
-              ExpandingTextParagraph(
-                title: 'Acronyms',
+              ExpandingTextWidget(
+                title: 'Information',
               ),
             ],
           ),
