@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/widgets/container_blur/blurred_image.dart';
-import 'package:travel_seila/screens/widgets/sidemenu/sidemenu.dart';
+import 'package:travel_seila/screens/main_widgets/container_blur/blurred_image.dart';
+import 'package:travel_seila/screens/main_widgets/sidemenu/sidemenu.dart';
 import 'package:travel_seila/themes/colors.dart';
 
 class ScaffoldWithSideMenu extends StatelessWidget {

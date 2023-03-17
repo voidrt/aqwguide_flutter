@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_seila/screens/new_player/widgets/expanding_text_widget.dart';
 import 'package:travel_seila/screens/new_player/widgets/generic_page_layout/generic_page_layout.dart';
-import 'package:travel_seila/screens/widgets/scaffold_custom/scaffold_custom.dart';
+import 'package:travel_seila/screens/main_widgets/scaffold_custom/scaffold_custom.dart';
 
 class NewPlayerScreen extends StatelessWidget {
   const NewPlayerScreen({Key? key}) : super(key: key);

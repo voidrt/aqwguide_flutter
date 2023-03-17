@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/screens/main_widgets/text_widgets/plain_text.dart';
 
 class ParagraphTextItem extends StatelessWidget {
   const ParagraphTextItem({
@@ -9,7 +9,7 @@ class ParagraphTextItem extends StatelessWidget {
   }) : super(key: key);
 
   final String title;
-  final List<String> topicTextList;
+  final List<dynamic> topicTextList;
 
   @override
   Widget build(BuildContext context) {

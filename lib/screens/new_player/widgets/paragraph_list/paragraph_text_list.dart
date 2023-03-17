@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_seila/screens/new_player/widgets/paragraph_list/paragraph_text.dart';
-import 'package:travel_seila/screens/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/screens/main_widgets/text_widgets/label_text.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class ParagraphTextList extends StatelessWidget {
@@ -19,6 +19,7 @@ class ParagraphTextList extends StatelessWidget {
     return Column(
       children: [
         ListView.builder(
+          shrinkWrap: true,
           itemBuilder: (context, index) {
             final topic = topicTitles[index];
             return Column(

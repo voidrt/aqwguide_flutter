@@ -1,12 +1,21 @@
 import 'dart:convert';
 
+import 'package:http/http.dart' as http;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/repository/guide_info.dart';
 
-final ProviderFamily<Map<String, dynamic>, String> guidePagesInfo =
-    Provider.family<Map<String, dynamic>, String>(
-  (ref, guidePage) {
-    final json = jsonDecode(jsonInfo);
-    return json[guidePage];
+final FutureProviderFamily<Map<String, dynamic>, String> guidePagesInfo =
+    FutureProvider.family<Map<String, dynamic>, String>(
+  (
+    ref,
+    guidePage,
+  ) async {
+    Uri uri = Uri(
+      scheme: 'https',
+      host: '6413ac85c469cff60d682e72.mockapi.io',
+      path: '/aqwguide/info/aqwiki',
+    );
+    final response = await http.get(uri);
+
+    return jsonDecode(response.body);
   },
 );
