@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/new_player/widgets/expanding_text_widget.dart';
-import 'package:travel_seila/screens/new_player/widgets/screen_body.dart';
+import 'package:travel_seila/screens/new_player/widgets/expanding_text/expanding_text_widget.dart';
+import 'package:travel_seila/screens/new_player/widgets/page_body/page_body.dart';
 import 'package:travel_seila/screens/main_widgets/text_widgets/page_name.dart';
 
 class GenericPageLayout extends StatelessWidget {
@@ -21,7 +21,7 @@ class GenericPageLayout extends StatelessWidget {
       child: Column(
         children: [
           PageTitle(titleString: title),
-          ScreenBody(
+          PageBody(
             constraints: constraints,
             paragraphs: paragraphs,
           ),

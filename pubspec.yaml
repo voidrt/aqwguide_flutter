@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/
     - assets/fonts/
+    - assets/json/aqwguide_json.json
   fonts:
   - family: Montserrat
     fonts:

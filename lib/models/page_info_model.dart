@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-class PageInfo {
-  const PageInfo({
+class PageModel {
+  const PageModel({
     required this.title,
     required this.categories,
     required this.categoryTopics,
@@ -13,8 +13,8 @@ class PageInfo {
   final List<String> categoryTopics;
   final List<String> topicsText;
 
-  factory PageInfo.fromMap(Map<String, dynamic> json) {
-    final pageInfo = PageInfo(
+  factory PageModel.fromMap(Map<String, dynamic> json) {
+    final pageInfo = PageModel(
       title: json['title'] as String,
       categories: json['categories'] as List<String>,
       categoryTopics: json['categoryTopics'] as List<String>,
@@ -23,7 +23,7 @@ class PageInfo {
     return pageInfo;
   }
 
-  factory PageInfo.fromJson(String source) {
-    return PageInfo.fromMap(jsonDecode(source));
+  factory PageModel.fromJson(String source) {
+    return PageModel.fromMap(jsonDecode(source));
   }
 }

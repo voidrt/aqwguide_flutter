@@ -2,13 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:travel_seila/core/routes/routes.dart';
 import './themes/app_theme.dart';
+import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
 void main() {
-  runApp(const ProviderScope(child: AQWGuide()));
+  FlutterError.demangleStackTrace = (StackTrace stack) {
+    if (stack is stack_trace.Trace) return stack.vmTrace;
+    if (stack is stack_trace.Chain) return stack.toTrace().vmTrace;
+    return stack;
+  };
+  runApp(
+    const ProviderScope(
+      child: AQWGuide(),
+    ),
+  );
 }
-// ! TEXTO COM LINK AO INVES DE SEI LA
-
-// ? WIDGET DE TEXTO COM LINK CUSTOM
 
 class AQWGuide extends StatelessWidget {
   const AQWGuide({Key? key}) : super(key: key);

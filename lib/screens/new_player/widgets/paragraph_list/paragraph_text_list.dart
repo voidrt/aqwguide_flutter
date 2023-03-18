@@ -7,21 +7,21 @@ class ParagraphTextList extends StatelessWidget {
   const ParagraphTextList({
     Key? key,
     required this.json,
+    required this.topics,
+    required this.texts,
   }) : super(key: key);
 
   final Map<String, dynamic> json;
-
+  final List<String> topics;
+  final List<String> texts;
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> topicsInfo = json['Topics'];
-    final List<String> topicTitles = topicsInfo.keys.toList();
-
     return Column(
       children: [
         ListView.builder(
           shrinkWrap: true,
           itemBuilder: (context, index) {
-            final topic = topicTitles[index];
+            final topic = topics[index];
             return Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -31,7 +31,7 @@ class ParagraphTextList extends StatelessWidget {
                 ),
                 ParagraphTextItem(
                   title: topic,
-                  topicTextList: topicsInfo[topic],
+                  topicTextList: texts,
                 ),
               ],
             );

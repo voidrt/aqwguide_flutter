@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/screens/new_player/widgets/expanding_text_widget.dart';
+import 'package:travel_seila/screens/new_player/widgets/expanding_text/expanding_text_widget.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
-class ScreenBody extends ConsumerWidget {
-  const ScreenBody({
+class PageBody extends ConsumerWidget {
+  const PageBody({
     Key? key,
     required this.constraints,
     required this.paragraphs,

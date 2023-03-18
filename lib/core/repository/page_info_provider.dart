@@ -1,21 +1,20 @@
 import 'dart:convert';
-
-import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:travel_seila/models/page_info_model.dart';
 
-final FutureProviderFamily<Map<String, dynamic>, String> guidePagesInfo =
-    FutureProvider.family<Map<String, dynamic>, String>(
+final FutureProviderFamily<PageModel, int> guidePagesModelProvider =
+    FutureProvider.family<PageModel, int>(
   (
     ref,
     guidePage,
   ) async {
-    Uri uri = Uri(
-      scheme: 'https',
-      host: '6413ac85c469cff60d682e72.mockapi.io',
-      path: '/aqwguide/info/aqwiki',
-    );
-    final response = await http.get(uri);
+    final response = await rootBundle.loadString('assets/sample.json');
+    final Map<String, dynamic> responseBody = jsonDecode(response)[guidePage];
 
-    return jsonDecode(response.body);
+    print(response);
+    print(responseBody);
+
+    return PageModel.fromMap(responseBody);
   },
 );
