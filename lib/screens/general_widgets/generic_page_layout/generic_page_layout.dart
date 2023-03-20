@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/new_player/widgets/expanding_text/expanding_text_widget.dart';
-import 'package:travel_seila/screens/new_player/widgets/page_body/page_body.dart';
-import 'package:travel_seila/screens/main_widgets/text_widgets/page_name.dart';
+import 'package:travel_seila/screens/general_widgets/expanding_text/expanding_text_widget.dart';
+import 'package:travel_seila/screens/general_widgets/text_widgets/page_title.dart';
+
+import '../page_body/page_body.dart';
 
 class GenericPageLayout extends StatelessWidget {
   const GenericPageLayout({
     Key? key,
     required this.title,
     required this.constraints,
-    required this.paragraphs,
+    required this.expandingParagraphs,
   }) : super(key: key);
 
   final String title;
   final BoxConstraints constraints;
-  final List<ExpandingTextWidget> paragraphs;
+  final List<ExpandingTextWidget> expandingParagraphs;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class GenericPageLayout extends StatelessWidget {
           PageTitle(titleString: title),
           PageBody(
             constraints: constraints,
-            paragraphs: paragraphs,
+            paragraphs: expandingParagraphs,
           ),
         ],
       ),

@@ -28,19 +28,26 @@ class InnerLabelText extends StatelessWidget {
   const InnerLabelText({
     Key? key,
     required this.titleString,
+    this.isSelectable = false,
   }) : super(key: key);
 
   final String titleString;
+  final bool isSelectable;
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: titleString,
-        style: Theme.of(context).textTheme.labelLarge!.copyWith(
-              fontSize: FontSize.defaultBody + 2,
-            ),
-      ),
-    );
+    return isSelectable
+        ? SelectableText(
+            titleString,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  fontSize: FontSize.defaultBody + 2,
+                ),
+          )
+        : Text(
+            titleString,
+            style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  fontSize: FontSize.defaultBody + 2,
+                ),
+          );
   }
 }

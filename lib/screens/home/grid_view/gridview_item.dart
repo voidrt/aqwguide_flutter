@@ -48,9 +48,10 @@ class _GridViewItemState extends ConsumerState<GridViewItem> {
             child: Text(
               widget.label,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: foregroundColor,
-                  ),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodySmall!
+                  .copyWith(color: foregroundColor),
             ),
           ),
         ),

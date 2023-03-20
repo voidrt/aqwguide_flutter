@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/main_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/screens/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/themes/colors.dart';
 
 class ParagraphTextItem extends StatelessWidget {
   const ParagraphTextItem({
@@ -9,7 +10,7 @@ class ParagraphTextItem extends StatelessWidget {
   }) : super(key: key);
 
   final String title;
-  final List<dynamic> topicTextList;
+  final List<String> topicTextList;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +18,15 @@ class ParagraphTextItem extends StatelessWidget {
       children: List.generate(
         topicTextList.length,
         (index) => ListTile(
+          enabled: false,
           leading: const Icon(
             Icons.square,
             size: 7,
+            color: AppColors.textWhite,
           ),
-          enabled: false,
           title: PlainText(
             string: topicTextList[index],
+            isSelectable: true,
             isInParagraph: true,
           ),
         ),

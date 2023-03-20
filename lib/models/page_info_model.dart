@@ -1,29 +1,45 @@
-import 'dart:convert';
-
 class PageModel {
   const PageModel({
     required this.title,
-    required this.categories,
-    required this.categoryTopics,
-    required this.topicsText,
+    required this.topics,
+    required this.subtopics,
   });
 
   final String title;
-  final List<String> categories;
-  final List<String> categoryTopics;
-  final List<String> topicsText;
+  final List<String> topics;
+  final List<PageSubtopic> subtopics;
 
   factory PageModel.fromMap(Map<String, dynamic> json) {
     final pageInfo = PageModel(
-      title: json['title'] as String,
-      categories: json['categories'] as List<String>,
-      categoryTopics: json['categoryTopics'] as List<String>,
-      topicsText: json['topicsText'] as List<String>,
+      title: json['title'],
+      topics: [...json['topics']],
+      subtopics: [
+        ...List.generate(
+          json['subtopics'].length,
+          (page) => PageSubtopic.fromMap(
+            json['subtopics'][page],
+          ),
+        ),
+      ],
     );
     return pageInfo;
   }
+}
 
-  factory PageModel.fromJson(String source) {
-    return PageModel.fromMap(jsonDecode(source));
+class PageSubtopic {
+  PageSubtopic({
+    required this.subtopicTitle,
+    required this.texts,
+  });
+
+  final String subtopicTitle;
+  final List<String> texts;
+
+  factory PageSubtopic.fromMap(Map<String, dynamic> pageTopic) {
+    final topic = PageSubtopic(
+      subtopicTitle: pageTopic['title'],
+      texts: List.from(pageTopic['texts']),
+    );
+    return topic;
   }
 }

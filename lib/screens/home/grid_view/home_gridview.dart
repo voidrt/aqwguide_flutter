@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/repository/topics_properties.dart';
+import 'package:travel_seila/core/providers/topics_provider/topics_properties.dart';
 import 'package:travel_seila/screens/home/grid_view/gridview_item.dart';
 import 'package:travel_seila/themes/paddings.dart';
 

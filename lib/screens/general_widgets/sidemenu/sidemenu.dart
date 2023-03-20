@@ -1,10 +1,12 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:travel_seila/core/repository/topics_properties.dart';
-import 'package:travel_seila/screens/main_widgets/scroll_physics.dart/ajustable_scroll.dart';
-import 'package:travel_seila/screens/main_widgets/text_widgets/aqwg_title.dart';
-import 'package:travel_seila/screens/main_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/core/providers/topics_provider/topics_properties.dart';
+import 'package:travel_seila/screens/general_widgets/scroll_physics.dart/ajustable_scroll.dart';
+import 'package:travel_seila/screens/general_widgets/text_widgets/aqwg_title.dart';
+import 'package:travel_seila/screens/general_widgets/text_widgets/plain_text.dart';
 
 import 'package:travel_seila/themes/colors.dart';
 
@@ -73,10 +75,11 @@ class _SideMenuState extends ConsumerState<SideMenu> {
               (index) {
                 return index == 0
                     ? const NavigationRailDestination(
+                        padding: EdgeInsets.zero,
                         icon: Icon(
                           Icons.home_rounded,
                           color: AppColors.textWhite,
-                          size: 20,
+                          size: 25,
                         ),
                         label: PlainText(
                           string: 'Home',

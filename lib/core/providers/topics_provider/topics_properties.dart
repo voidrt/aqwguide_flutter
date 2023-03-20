@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/repository/topics_general_info.dart';
+import 'package:travel_seila/core/providers/topics_provider/topics_general_info.dart';
 
 final Provider<List<String>> contentNamesProvider = Provider(
   (ref) => ref.watch(topicsInfoProvider),

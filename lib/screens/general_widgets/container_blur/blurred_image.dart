@@ -23,7 +23,7 @@ class BlurredImageContainer extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            'assets/${assetImage ?? 'nulgath.png'}',
+            'assets/images/${assetImage ?? 'nulgath.png'}',
           ),
           fit: BoxFit.cover,
         ),

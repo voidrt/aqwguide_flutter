@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/repository/page_info_provider.dart';
-import 'package:travel_seila/screens/main_widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/screens/new_player/widgets/paragraph_list/paragraph_text_list.dart';
+import 'package:travel_seila/models/page_info_model.dart';
+import 'package:travel_seila/screens/general_widgets/paragraph_list/paragraph_text_list.dart';
+import 'package:travel_seila/screens/general_widgets/text_widgets/label_text.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class ExpandingTextWidget extends ConsumerStatefulWidget {
   const ExpandingTextWidget({
     Key? key,
-    required this.subtitle,
+    required this.expandingTextTitle,
+    required this.topic,
   }) : super(key: key);
 
-  final String subtitle;
+  final String expandingTextTitle;
+  final PageSubtopic topic;
 
   @override
   ConsumerState<ExpandingTextWidget> createState() =>
@@ -21,26 +23,21 @@ class ExpandingTextWidget extends ConsumerStatefulWidget {
 class _ExpandingTextParagraphState extends ConsumerState<ExpandingTextWidget> {
   @override
   Widget build(BuildContext context) {
-    final Map<String, dynamic> pageInfo = ref
-        .watch(
-          guidePagesModelProvider(0),
-        )
-        .value as Map<String, dynamic>;
+    final mediaQuery = MediaQuery.of(context).size.height;
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg * 2),
-      height: MediaQuery.of(context).size.height,
+      height: mediaQuery,
       child: Column(
         children: [
           ExpansionTile(
             title: LabelText(
-              titleString: widget.subtitle,
+              titleString: widget.expandingTextTitle,
             ),
             children: [
               ParagraphTextList(
-                json: pageInfo,
-                topics: pageInfo['topics'],
-                texts: pageInfo['texts'],
+                topicTitle: widget.topic.subtopicTitle,
+                texts: widget.topic.texts,
               ),
             ],
           ),

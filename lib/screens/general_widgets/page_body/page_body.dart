@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/screens/new_player/widgets/expanding_text/expanding_text_widget.dart';
+import 'package:travel_seila/screens/general_widgets/expanding_text/expanding_text_widget.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 

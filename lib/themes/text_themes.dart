@@ -21,7 +21,7 @@ class TextStyles {
   );
 
   static const TextStyle text = TextStyle(
-    fontSize: FontSize.defaultBody - 1,
+    fontSize: FontSize.defaultBody - 2,
     fontWeight: FontWeight.w400,
     color: AppColors.textWhite,
   );
