@@ -20,12 +20,12 @@ class PlainText extends StatelessWidget {
       child: isSelectable
           ? SelectableText(
               string,
-              textAlign: TextAlign.justify,
+              textAlign: TextAlign.start,
               style: Theme.of(context).textTheme.bodySmall,
             )
           : Text(
               string,
-              textAlign: TextAlign.justify,
+              textAlign: TextAlign.start,
               style: Theme.of(context).textTheme.bodySmall,
             ),
     );

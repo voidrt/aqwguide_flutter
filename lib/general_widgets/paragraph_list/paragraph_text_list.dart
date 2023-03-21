@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/general_widgets/paragraph_list/paragraph_text.dart';
-import 'package:travel_seila/screens/general_widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/general_widgets/paragraph_list/paragraph_text.dart';
+import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class ParagraphTextList extends StatelessWidget {
@@ -26,9 +26,12 @@ class ParagraphTextList extends StatelessWidget {
             const SizedBox(
               height: PaddingMeasure.p,
             ),
-            ParagraphTextItem(
-              title: topicTitle,
-              topicTextList: texts,
+            ...List.generate(
+              texts.length,
+              (index) => ParagraphTextItem(
+                title: topicTitle,
+                topicText: texts[index],
+              ),
             ),
           ],
         ),

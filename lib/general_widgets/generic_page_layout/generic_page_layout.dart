@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/screens/general_widgets/expanding_text/expanding_text_widget.dart';
-import 'package:travel_seila/screens/general_widgets/text_widgets/page_title.dart';
+import 'package:travel_seila/general_widgets/expanding_text/expanding_text_widget.dart';
+import 'package:travel_seila/general_widgets/text_widgets/page_title.dart';
 
 import '../page_body/page_body.dart';
 

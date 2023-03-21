@@ -33,12 +33,14 @@ class PageTitle extends StatelessWidget {
                     .copyWith(color: AppColors.darkGrey1000),
               ),
             ),
-            Text(
-              titleString,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(color: Colors.white),
+            Positioned(
+              child: Text(
+                titleString,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge!
+                    .copyWith(color: Colors.white),
+              ),
             )
           ],
         ),

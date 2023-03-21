@@ -22,7 +22,7 @@ class TextStyles {
 
   static const TextStyle text = TextStyle(
     fontSize: FontSize.defaultBody - 2,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w300,
     color: AppColors.textWhite,
   );
 }

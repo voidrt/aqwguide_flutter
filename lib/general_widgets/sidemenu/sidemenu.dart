@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_seila/core/providers/topics_provider/topics_properties.dart';
-import 'package:travel_seila/screens/general_widgets/scroll_physics.dart/ajustable_scroll.dart';
-import 'package:travel_seila/screens/general_widgets/text_widgets/aqwg_title.dart';
-import 'package:travel_seila/screens/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/general_widgets/scroll_physics.dart/ajustable_scroll.dart';
+import 'package:travel_seila/general_widgets/text_widgets/aqwg_title.dart';
+import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
 
 import 'package:travel_seila/themes/colors.dart';
 

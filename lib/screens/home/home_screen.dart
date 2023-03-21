@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:travel_seila/screens/home/grid_view/home_gridview.dart';
-import 'package:travel_seila/screens/general_widgets/scaffold_custom/scaffold_custom.dart';
+import 'package:travel_seila/general_widgets/scaffold_custom/scaffold_custom.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

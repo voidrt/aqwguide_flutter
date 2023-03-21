@@ -2,27 +2,51 @@ class PageModel {
   const PageModel({
     required this.title,
     required this.topics,
-    required this.subtopics,
   });
 
   final String title;
-  final List<String> topics;
-  final List<PageSubtopic> subtopics;
+  final List<PageTopic> topics;
 
   factory PageModel.fromMap(Map<String, dynamic> json) {
     final pageInfo = PageModel(
       title: json['title'],
-      topics: [...json['topics']],
-      subtopics: [
+      topics: [
         ...List.generate(
-          json['subtopics'].length,
-          (page) => PageSubtopic.fromMap(
-            json['subtopics'][page],
-          ),
+          json['topics'].length,
+          (index) => PageTopic.fromMap(json['topics'][index]),
         ),
       ],
     );
     return pageInfo;
+  }
+}
+
+class PageTopic {
+  PageTopic({
+    required this.title,
+    required this.subtopicsList,
+  });
+
+  final String title;
+  final List<PageSubtopic> subtopicsList;
+
+  factory PageTopic.fromMap(Map<String, dynamic> jsonPageTopic) {
+    final title = jsonPageTopic['topicTitle'];
+    final subtopics = jsonPageTopic['subtopics'];
+
+    final topic = PageTopic(
+      title: title,
+      subtopicsList: [
+        ...List.generate(
+          subtopics.length,
+          (index) => PageSubtopic.fromMap(
+            subtopics[index],
+          ),
+        )
+      ],
+    );
+
+    return topic;
   }
 }
 
@@ -35,11 +59,11 @@ class PageSubtopic {
   final String subtopicTitle;
   final List<String> texts;
 
-  factory PageSubtopic.fromMap(Map<String, dynamic> pageTopic) {
-    final topic = PageSubtopic(
-      subtopicTitle: pageTopic['title'],
-      texts: List.from(pageTopic['texts']),
+  factory PageSubtopic.fromMap(Map<String, dynamic> jsonSubtopic) {
+    final pageSubtopic = PageSubtopic(
+      subtopicTitle: jsonSubtopic['subtopicTitle'],
+      texts: List.from(jsonSubtopic['texts']),
     );
-    return topic;
+    return pageSubtopic;
   }
 }
