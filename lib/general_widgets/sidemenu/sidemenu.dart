@@ -9,6 +9,7 @@ import 'package:travel_seila/general_widgets/text_widgets/aqwg_title.dart';
 import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
 
 import 'package:travel_seila/themes/colors.dart';
+import 'package:travel_seila/themes/paddings.dart';
 
 class SideMenu extends ConsumerStatefulWidget {
   SideMenu({
@@ -36,6 +37,7 @@ class _SideMenuState extends ConsumerState<SideMenu> {
       child: ConstrainedBox(
         constraints: BoxConstraints(
           minHeight: mediaQuerySize.height,
+          maxWidth: mediaQuerySize.width / 5,
         ),
         child: IntrinsicHeight(
           child: NavigationRail(
@@ -68,6 +70,7 @@ class _SideMenuState extends ConsumerState<SideMenu> {
                   endIndent: 15,
                   color: AppColors.textWhite,
                 ),
+                const SizedBox(height: PaddingMeasure.m)
               ],
             ),
             destinations: List.generate(

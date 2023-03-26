@@ -12,38 +12,32 @@ class PageTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: PaddingMeasure.exg * 1.5,
-        horizontal: PaddingMeasure.gg,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: PaddingMeasure.gg),
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Positioned(
-              bottom: -3,
-              right: 4,
-              child: Text(
-                titleString,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge!
-                    .copyWith(color: AppColors.darkGrey1000),
-              ),
+    return Padding(
+      padding: const EdgeInsets.all(PaddingMeasure.exg * 1.5),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            bottom: -3,
+            right: 4,
+            child: Text(
+              titleString,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(color: AppColors.darkGrey1000),
             ),
-            Positioned(
-              child: Text(
-                titleString,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge!
-                    .copyWith(color: Colors.white),
-              ),
-            )
-          ],
-        ),
+          ),
+          Positioned(
+            child: Text(
+              titleString,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(color: Colors.white),
+            ),
+          )
+        ],
       ),
     );
   }

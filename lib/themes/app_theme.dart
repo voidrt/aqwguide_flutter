@@ -27,6 +27,7 @@ class AppTheme {
     iconTheme: const IconThemeData().copyWith(
       color: AppColors.textWhite,
     ),
+    dividerColor: Colors.transparent,
     inputDecorationTheme: const InputDecorationTheme().copyWith(
       focusColor: AppColors.black,
       labelStyle: const TextStyle(

@@ -23,22 +23,30 @@ class ExpandingTextWidget extends ConsumerStatefulWidget {
 class _ExpandingTextParagraphState extends ConsumerState<ExpandingTextWidget> {
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context).size.height;
     final subtopics = widget.subtopics;
 
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg * 2),
-      height: mediaQuery,
+      margin: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           ExpansionTile(
             title: LabelText(
               titleString: widget.expandingTextTitle,
             ),
             children: [
-              ...List.generate(
-                subtopics.length,
-                (index) => ParagraphTextList(
+              const Padding(
+                padding: EdgeInsets.only(bottom: PaddingMeasure.g),
+                child: Divider(
+                  thickness: 0.5,
+                  height: 1,
+                ),
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: subtopics.length,
+                itemBuilder: (context, index) => ParagraphTextList(
                   topicTitle: subtopics[index].subtopicTitle,
                   texts: subtopics[index].texts,
                 ),
@@ -46,7 +54,10 @@ class _ExpandingTextParagraphState extends ConsumerState<ExpandingTextWidget> {
             ],
           ),
           const Padding(
-            padding: EdgeInsets.only(bottom: PaddingMeasure.exg),
+            padding: EdgeInsets.only(
+              top: PaddingMeasure.pp,
+              bottom: PaddingMeasure.g,
+            ),
             child: Divider(
               thickness: 0.5,
               height: 1,

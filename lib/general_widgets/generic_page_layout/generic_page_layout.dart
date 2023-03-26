@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/expanding_text/expanding_text_widget.dart';
 import 'package:travel_seila/general_widgets/text_widgets/page_title.dart';
-
-import '../page_body/page_body.dart';
+import 'package:travel_seila/themes/colors.dart';
+import 'package:travel_seila/themes/paddings.dart';
 
 class GenericPageLayout extends StatelessWidget {
   const GenericPageLayout({
@@ -14,17 +13,23 @@ class GenericPageLayout extends StatelessWidget {
 
   final String title;
   final BoxConstraints constraints;
-  final List<ExpandingTextWidget> expandingParagraphs;
+  final Widget expandingParagraphs;
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           PageTitle(titleString: title),
-          PageBody(
-            constraints: constraints,
-            paragraphs: expandingParagraphs,
+          Container(
+            color: AppColors.background,
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(top: PaddingMeasure.g * 1.5),
+              child: expandingParagraphs,
+            ),
           ),
         ],
       ),

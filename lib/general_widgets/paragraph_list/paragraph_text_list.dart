@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/paragraph_list/paragraph_text.dart';
 import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class ParagraphTextList extends StatelessWidget {
@@ -28,9 +29,22 @@ class ParagraphTextList extends StatelessWidget {
             ),
             ...List.generate(
               texts.length,
-              (index) => ParagraphTextItem(
-                title: topicTitle,
-                topicText: texts[index],
+              (index) => Column(
+                children: [
+                  ListTile(
+                    enabled: false,
+                    leading: const Icon(
+                      Icons.square,
+                      size: 7,
+                      color: AppColors.textWhite,
+                    ),
+                    title: PlainText(
+                      string: texts[index],
+                      isSelectable: true,
+                      isInParagraph: true,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

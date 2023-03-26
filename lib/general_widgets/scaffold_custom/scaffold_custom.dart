@@ -23,27 +23,31 @@ class ScaffoldWithSideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      body: BlurredImageContainer(
-        assetImage: backgroundImage,
-        blurLevel: backgroundImageBlur,
-        constraints: constraints,
-        child: Row(
-          children: [
-            SideMenu(
-              selectedIndex: pageIndex ?? 0,
-            ),
-            const VerticalDivider(
-              width: 1,
-              thickness: 1,
-              color: AppColors.textWhite,
-            ),
-            Expanded(
-              flex: expandedFlex ?? 1,
-              child: child,
-            )
-          ],
+    return SafeArea(
+      child: Scaffold(
+        extendBody: true,
+        backgroundColor: AppColors.background,
+        body: BlurredImageContainer(
+          assetImage: backgroundImage,
+          blurLevel: backgroundImageBlur,
+          constraints: constraints,
+          child: Row(
+            children: [
+              SideMenu(
+                selectedIndex: pageIndex ?? 0,
+              ),
+              const VerticalDivider(
+                width: 1,
+                thickness: 1,
+                color: AppColors.textWhite,
+              ),
+              Flexible(
+                flex: expandedFlex ?? 1,
+                fit: FlexFit.loose,
+                child: child,
+              )
+            ],
+          ),
         ),
       ),
     );

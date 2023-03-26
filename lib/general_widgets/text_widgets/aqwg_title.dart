@@ -15,8 +15,7 @@ class AqwgTitle extends StatelessWidget {
     return Container(
       color: Colors.transparent,
       margin: const EdgeInsets.symmetric(
-        vertical: PaddingMeasure.gg,
-        horizontal: PaddingMeasure.p,
+        vertical: PaddingMeasure.g,
       ),
       child: Text(
         titleString,

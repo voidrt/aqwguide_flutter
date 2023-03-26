@@ -35,18 +35,16 @@ class NewPlayerScreen extends ConsumerWidget {
               child: GenericPageLayout(
                 title: pageTitle,
                 constraints: constraints,
-                expandingParagraphs: [
-                  ...List.generate(
-                    topics.length,
-                    (index) {
-                      final topic = topics[index];
-                      return ExpandingTextWidget(
-                        expandingTextTitle: topic.title,
-                        subtopics: topic.subtopicsList,
-                      );
-                    },
-                  ),
-                ],
+                expandingParagraphs: ListView.builder(
+                  itemCount: topics.length,
+                  itemBuilder: (context, index) {
+                    final topic = topics[index];
+                    return ExpandingTextWidget(
+                      expandingTextTitle: topic.title,
+                      subtopics: topic.subtopicsList,
+                    );
+                  },
+                ),
               ),
             );
           },
