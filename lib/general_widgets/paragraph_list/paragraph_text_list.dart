@@ -21,7 +21,7 @@ class ParagraphTextList extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             InnerLabelText(
-              titleString: topicTitle,
+              string: topicTitle,
               isSelectable: true,
             ),
             const SizedBox(

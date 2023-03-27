@@ -40,6 +40,8 @@ class AppTheme {
       iconColor: AppColors.textWhite,
       expandedAlignment: Alignment.centerLeft,
       tilePadding: EdgeInsets.zero,
+      backgroundColor: AppColors.background,
+      collapsedBackgroundColor: AppColors.background,
     ),
     textTheme: const TextTheme().copyWith(
       titleLarge: TextStyles.boldTitle,

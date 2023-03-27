@@ -5,10 +5,7 @@ import 'package:travel_seila/themes/colors.dart';
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({
     Key? key,
-    this.backgroundImage,
   }) : super(key: key);
-
-  final String? backgroundImage;
 
   @override
   Widget build(BuildContext context) {

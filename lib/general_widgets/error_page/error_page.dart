@@ -26,7 +26,7 @@ class ErrorPageWidget extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const LabelText(
-                titleString:
+                string:
                     'An error has occured with our API, please check in later',
               ),
               PlainText(

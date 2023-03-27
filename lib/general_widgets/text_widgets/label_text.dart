@@ -5,10 +5,10 @@ import 'package:travel_seila/themes/text_themes.dart';
 class LabelText extends StatelessWidget {
   const LabelText({
     Key? key,
-    required this.titleString,
+    required this.string,
   }) : super(key: key);
 
-  final String titleString;
+  final String string;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class LabelText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: PaddingMeasure.m),
       child: RichText(
         text: TextSpan(
-          text: titleString,
+          text: string,
           style: Theme.of(context).textTheme.labelLarge,
         ),
       ),
@@ -27,24 +27,24 @@ class LabelText extends StatelessWidget {
 class InnerLabelText extends StatelessWidget {
   const InnerLabelText({
     Key? key,
-    required this.titleString,
+    required this.string,
     this.isSelectable = false,
   }) : super(key: key);
 
-  final String titleString;
+  final String string;
   final bool isSelectable;
 
   @override
   Widget build(BuildContext context) {
     return isSelectable
         ? SelectableText(
-            titleString,
+            string,
             style: Theme.of(context).textTheme.labelLarge!.copyWith(
                   fontSize: FontSize.defaultBody + 2,
                 ),
           )
         : Text(
-            titleString,
+            string,
             style: Theme.of(context).textTheme.labelLarge!.copyWith(
                   fontSize: FontSize.defaultBody + 2,
                 ),

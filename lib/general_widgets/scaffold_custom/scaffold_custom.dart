@@ -30,7 +30,6 @@ class ScaffoldWithSideMenu extends StatelessWidget {
         body: BlurredImageContainer(
           assetImage: backgroundImage,
           blurLevel: backgroundImageBlur,
-          constraints: constraints,
           child: Row(
             children: [
               SideMenu(
@@ -41,9 +40,8 @@ class ScaffoldWithSideMenu extends StatelessWidget {
                 thickness: 1,
                 color: AppColors.textWhite,
               ),
-              Flexible(
+              Expanded(
                 flex: expandedFlex ?? 1,
-                fit: FlexFit.loose,
                 child: child,
               )
             ],

@@ -12,11 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^4.0.3
-  flutter_image_slideshow: ^0.1.2
   flutter_riverpod: ^2.3.1
   shared_preferences: ^2.0.15
   go_router: ^6.2.0
   http: ^0.13.5
+  expansion_card: ^0.1.0
 
 dev_dependencies:
   flutter_test:

@@ -5,10 +5,10 @@ import 'package:travel_seila/themes/paddings.dart';
 class PageTitle extends StatelessWidget {
   const PageTitle({
     Key? key,
-    required this.titleString,
+    required this.pageTitle,
   }) : super(key: key);
 
-  final String titleString;
+  final String pageTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class PageTitle extends StatelessWidget {
             bottom: -3,
             right: 4,
             child: Text(
-              titleString,
+              pageTitle,
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
@@ -30,7 +30,7 @@ class PageTitle extends StatelessWidget {
           ),
           Positioned(
             child: Text(
-              titleString,
+              pageTitle,
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
