@@ -13,8 +13,6 @@ class LoadingWidget extends StatelessWidget {
       builder: (context, constraints) {
         return ScaffoldWithSideMenu(
           constraints: constraints,
-          backgroundImage: 'background_color.png',
-          backgroundImageBlur: 5,
           child: const Center(
             child: CircularProgressIndicator(
               color: AppColors.secondary,

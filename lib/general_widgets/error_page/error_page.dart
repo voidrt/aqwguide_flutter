@@ -19,8 +19,6 @@ class ErrorPageWidget extends ConsumerWidget {
     return LayoutBuilder(
       builder: (context, constraints) => ScaffoldWithSideMenu(
         constraints: constraints,
-        backgroundImage: 'dage.png',
-        backgroundImageBlur: 5,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
