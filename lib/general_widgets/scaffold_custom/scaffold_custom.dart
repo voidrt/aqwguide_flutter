@@ -42,7 +42,9 @@ class ScaffoldWithSideMenu extends StatelessWidget {
               ),
               Expanded(
                 flex: expandedFlex ?? 1,
-                child: child,
+                child: SingleChildScrollView(
+                  child: child,
+                ),
               )
             ],
           ),

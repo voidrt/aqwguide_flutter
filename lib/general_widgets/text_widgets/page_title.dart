@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class PageTitle extends StatelessWidget {
@@ -12,32 +11,15 @@ class PageTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(PaddingMeasure.exg * 1.5),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Positioned(
-            bottom: -3,
-            right: 4,
-            child: Text(
-              pageTitle,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(color: AppColors.darkGrey1000),
-            ),
-          ),
-          Positioned(
-            child: Text(
-              pageTitle,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(color: Colors.white),
-            ),
-          )
-        ],
+    final Size mediaQuerySize = MediaQuery.of(context).size;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg * 1.5),
+      height: mediaQuerySize.height / 2.5,
+      child: Center(
+        child: Text(
+          pageTitle,
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
       ),
     );
   }

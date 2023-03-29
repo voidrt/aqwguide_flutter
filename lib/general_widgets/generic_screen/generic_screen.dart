@@ -16,35 +16,29 @@ class GenericPageLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-
     return Column(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                PageTitle(pageTitle: pageTitle),
-                Container(
-                  color: AppColors.background,
-                  child: Column(
-                    children: [
-                      ...pageTopics.map(
-                        (topic) {
-                          return ExpansionCardWidget(
-                            cardTitle: topic.title,
-                            cardSubtopics: topic.subtopicsList,
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
+        PageTitle(
+          pageTitle: pageTitle,
         ),
+        Container(
+          color: AppColors.background,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              ...pageTopics.map(
+                (topic) {
+                  return ExpansionCardWidget(
+                    cardTitle: topic.title,
+                    cardSubtopics: topic.subtopicsList,
+                  );
+                },
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

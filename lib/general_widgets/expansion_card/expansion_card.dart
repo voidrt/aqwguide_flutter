@@ -17,54 +17,60 @@ class ExpansionCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ExpansionTile(
-          childrenPadding: const EdgeInsets.symmetric(
-            horizontal: PaddingMeasure.exg * 1.4,
+    return ExpansionTile(
+      childrenPadding: const EdgeInsets.only(
+        left: PaddingMeasure.exg * 1.4,
+        bottom: PaddingMeasure.g,
+      ),
+      tilePadding: const EdgeInsets.fromLTRB(
+        PaddingMeasure.exg, //left
+        PaddingMeasure.g, //top
+        PaddingMeasure.exg, //right
+        PaddingMeasure.p, //bottom
+      ),
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          LabelText(string: cardTitle),
+          const Divider(
+            thickness: 0.5,
+            height: 1,
           ),
-          tilePadding: const EdgeInsets.symmetric(
-            horizontal: PaddingMeasure.exg,
-          ),
-          title: LabelText(string: cardTitle),
-          trailing: const Icon(
-            Icons.keyboard_arrow_down_rounded,
-            size: 20,
-            color: AppColors.textWhite,
-          ),
-          children: const [
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-            PlainText(
-              string: 'hey',
-            ),
-          ],
+        ],
+      ),
+      trailing: const Icon(
+        Icons.keyboard_arrow_down_rounded,
+        size: 20,
+        color: AppColors.textWhite,
+      ),
+      children: const [
+        PlainText(
+          string: 'hey',
         ),
-        const Divider(
-          thickness: 0.5,
-          height: 1,
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
+        ),
+        PlainText(
+          string: 'hey',
         ),
       ],
     );

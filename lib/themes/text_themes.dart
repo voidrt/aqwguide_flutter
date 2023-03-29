@@ -2,10 +2,17 @@ import '../../themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class TextStyles {
-  static const TextStyle boldTitle = TextStyle(
+  static const TextStyle pageTitle = TextStyle(
     fontSize: FontSize.exg,
     fontWeight: FontWeight.bold,
     color: AppColors.textWhite,
+    shadows: [
+      Shadow(
+        offset: Offset(-4, -5),
+        blurRadius: 3,
+        color: AppColors.darkGrey1000,
+      ),
+    ],
   );
 
   static const TextStyle labelTitle = TextStyle(

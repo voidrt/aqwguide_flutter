@@ -44,7 +44,7 @@ class AppTheme {
       collapsedBackgroundColor: AppColors.background,
     ),
     textTheme: const TextTheme().copyWith(
-      titleLarge: TextStyles.boldTitle,
+      titleLarge: TextStyles.pageTitle,
       labelLarge: TextStyles.labelTitle,
       bodyMedium: TextStyles.title,
       bodySmall: TextStyles.text,
