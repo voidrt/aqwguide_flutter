@@ -27,8 +27,6 @@ class NewPlayerScreen extends ConsumerWidget {
           builder: (context, constraints) {
             return ScaffoldWithSideMenu(
               constraints: constraints,
-              backgroundImage: newPlayerBackgroundImage,
-              backgroundImageBlur: 5,
               pageIndex: 1,
               child: GenericPageLayout(
                 pageTitle: pageTitle,
