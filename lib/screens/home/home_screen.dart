@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/image_blur/blurred_image.dart';
+import 'package:travel_seila/general_widgets/blurred_image_widget/blurred_image.dart';
 import 'package:travel_seila/general_widgets/sidemenu/sidemenu.dart';
 
 import 'package:travel_seila/screens/home/grid_view/home_gridview.dart';
@@ -15,10 +15,13 @@ class HomeScreen extends StatelessWidget {
         // nao pergunta o pq
         final gridViewCenterPadding = constraints.maxWidth / 7;
         //foi a unica coisa que funcionou
+
         return Scaffold(
           body: BlurredImageBackground(
             assetImage: 'nulgath.png',
             blurLevel: 10,
+            height: constraints.maxHeight,
+            width: constraints.maxWidth,
             child: Row(
               children: [
                 SideMenu(

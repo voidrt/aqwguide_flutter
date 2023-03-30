@@ -2,43 +2,45 @@ import 'package:flutter/material.dart';
 import 'package:travel_seila/general_widgets/expansion_card/expansion_card.dart';
 import 'package:travel_seila/general_widgets/text_widgets/page_title.dart';
 import 'package:travel_seila/models/page_info_model.dart';
-import 'package:travel_seila/themes/colors.dart';
 
 class GenericPageLayout extends StatelessWidget {
   const GenericPageLayout({
     Key? key,
+    required this.constraints,
     required this.pageTitle,
     required this.pageTopics,
+    this.backgroundImage,
   }) : super(key: key);
 
+  final BoxConstraints constraints;
   final String pageTitle;
   final List<PageTopic> pageTopics;
+  final String? backgroundImage;
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         PageTitle(
           pageTitle: pageTitle,
+          backgroundImage: backgroundImage,
+          backgroundImageBlur: 5,
+          constraints: constraints,
         ),
-        Container(
-          color: AppColors.background,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              ...pageTopics.map(
-                (topic) {
-                  return ExpansionCardWidget(
-                    cardTitle: topic.title,
-                    cardSubtopics: topic.subtopicsList,
-                  );
-                },
-              ),
-            ],
-          ),
-        )
+        Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            ...pageTopics.map(
+              (topic) {
+                return ExpansionCardWidget(
+                  cardTitle: topic.title,
+                  cardSubtopics: topic.subtopicsList,
+                );
+              },
+            ),
+          ],
+        ),
       ],
     );
   }

@@ -31,6 +31,8 @@ class NewPlayerScreen extends ConsumerWidget {
               child: GenericPageLayout(
                 pageTitle: pageTitle,
                 pageTopics: topics,
+                backgroundImage: newPlayerBackgroundImage,
+                constraints: constraints,
               ),
             );
           },
