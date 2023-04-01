@@ -22,19 +22,19 @@ class BlurredImageBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height,
-      width: width,
       child: Stack(
         fit: StackFit.expand,
-        clipBehavior: Clip.hardEdge,
         children: [
-          ImageFiltered(
-            imageFilter: ImageFilter.blur(
-              sigmaX: 5.0,
-              sigmaY: 5.0,
-            ),
-            child: Image.asset(
-              'assets/images/$assetImage',
-              fit: BoxFit.cover,
+          Positioned(
+            child: ImageFiltered(
+              imageFilter: ImageFilter.blur(
+                sigmaX: blurLevel ?? 5,
+                sigmaY: blurLevel ?? 5,
+              ),
+              child: Image.asset(
+                'assets/images/$assetImage',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           child,

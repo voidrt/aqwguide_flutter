@@ -8,8 +8,8 @@ class TextStyles {
     color: AppColors.textWhite,
     shadows: [
       Shadow(
-        offset: Offset(-4, -5),
-        blurRadius: 3,
+        offset: Offset(-4, 5),
+        blurRadius: 0,
         color: AppColors.darkGrey1000,
       ),
     ],

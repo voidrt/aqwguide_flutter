@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_seila/general_widgets/expansion_card/expansion_card.dart';
+import 'package:travel_seila/general_widgets/page_footer/page_footer.dart';
 import 'package:travel_seila/general_widgets/text_widgets/page_title.dart';
 import 'package:travel_seila/models/page_info_model.dart';
 
@@ -29,7 +30,6 @@ class GenericPageLayout extends StatelessWidget {
           constraints: constraints,
         ),
         Column(
-          mainAxisSize: MainAxisSize.max,
           children: [
             ...pageTopics.map(
               (topic) {
@@ -41,6 +41,10 @@ class GenericPageLayout extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(
+          height: 200,
+        ),
+        const PageFooter()
       ],
     );
   }

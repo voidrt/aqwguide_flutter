@@ -19,18 +19,18 @@ class ExpansionCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpansionTile(
       childrenPadding: const EdgeInsets.only(
-        left: PaddingMeasure.exg * 1.4,
+        left: PaddingMeasure.exg * 1.8,
         bottom: PaddingMeasure.g,
       ),
       tilePadding: const EdgeInsets.fromLTRB(
-        PaddingMeasure.exg, //left
+        PaddingMeasure.exg * 1.4, //left
         PaddingMeasure.g, //top
-        PaddingMeasure.exg, //right
+        PaddingMeasure.exg * 1.4, //right
         PaddingMeasure.p, //bottom
       ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.max,
         children: [
           LabelText(string: cardTitle),
           const Divider(
