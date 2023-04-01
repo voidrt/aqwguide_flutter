@@ -16,38 +16,30 @@ class ParagraphTextList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            InnerLabelText(
-              string: topicTitle,
+        InnerLabelText(
+          string: topicTitle,
+          isSelectable: true,
+        ),
+        const SizedBox(
+          height: PaddingMeasure.p,
+        ),
+        ...List.generate(
+          texts.length,
+          (index) => ListTile(
+            enabled: false,
+            leading: const Icon(
+              Icons.square,
+              size: 7,
+              color: AppColors.textWhite,
+            ),
+            title: PlainText(
+              string: texts[index],
               isSelectable: true,
+              isInParagraph: true,
             ),
-            const SizedBox(
-              height: PaddingMeasure.p,
-            ),
-            ...List.generate(
-              texts.length,
-              (index) => Column(
-                children: [
-                  ListTile(
-                    enabled: false,
-                    leading: const Icon(
-                      Icons.square,
-                      size: 7,
-                      color: AppColors.textWhite,
-                    ),
-                    title: PlainText(
-                      string: texts[index],
-                      isSelectable: true,
-                      isInParagraph: true,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
       ],
     );

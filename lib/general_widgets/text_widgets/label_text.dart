@@ -40,13 +40,13 @@ class InnerLabelText extends StatelessWidget {
         ? SelectableText(
             string,
             style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                  fontSize: FontSize.defaultBody + 2,
+                  fontSize: FontSize.defaultBody + 1,
                 ),
           )
         : Text(
             string,
             style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                  fontSize: FontSize.defaultBody + 2,
+                  fontSize: FontSize.defaultBody + 1,
                 ),
           );
   }

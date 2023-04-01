@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_seila/general_widgets/paragraph_list/paragraph_text_list.dart';
 import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
 import 'package:travel_seila/models/page_info_model.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
@@ -18,16 +18,6 @@ class ExpansionCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      childrenPadding: const EdgeInsets.only(
-        left: PaddingMeasure.exg * 1.8,
-        bottom: PaddingMeasure.g,
-      ),
-      tilePadding: const EdgeInsets.fromLTRB(
-        PaddingMeasure.exg * 1.4, //left
-        PaddingMeasure.g, //top
-        PaddingMeasure.exg * 1.4, //right
-        PaddingMeasure.p, //bottom
-      ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -44,33 +34,28 @@ class ExpansionCardWidget extends StatelessWidget {
         size: 20,
         color: AppColors.textWhite,
       ),
-      children: const [
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
-        ),
-        PlainText(
-          string: 'hey',
+      childrenPadding: const EdgeInsets.only(
+        left: PaddingMeasure.exg * 1.4,
+        right: PaddingMeasure.exg * 1.8,
+        bottom: PaddingMeasure.g,
+      ),
+      tilePadding: const EdgeInsets.fromLTRB(
+        PaddingMeasure.exg * 1.4, //left
+        PaddingMeasure.g, //top
+        PaddingMeasure.exg * 1.4, //right
+        PaddingMeasure.p, //bottom
+      ),
+      children: [
+        ...List.generate(
+          cardSubtopics.length,
+          (index) {
+            final subtopic = cardSubtopics[index];
+
+            return ParagraphTextList(
+              topicTitle: subtopic.subtopicTitle,
+              texts: subtopic.texts,
+            );
+          },
         ),
       ],
     );
