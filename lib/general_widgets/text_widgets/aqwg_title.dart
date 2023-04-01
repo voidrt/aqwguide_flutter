@@ -3,10 +3,7 @@ import 'package:travel_seila/themes/paddings.dart';
 import 'package:travel_seila/themes/text_themes.dart';
 
 class AqwgTitle extends StatelessWidget {
-  const AqwgTitle({
-    Key? key,
-    required this.titleString,
-  }) : super(key: key);
+  const AqwgTitle({Key? key, required this.titleString}) : super(key: key);
 
   final String titleString;
 

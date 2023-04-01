@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/general_widgets/text_widgets/footer_text.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -20,14 +20,11 @@ class PageFooter extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              PlainText(
+              FooterText(
                 string: 'For the community, by the community',
               ),
-              Padding(
-                padding: EdgeInsets.only(top: PaddingMeasure.pp),
-                child: PlainText(
-                  string: 'Remade by void#7066',
-                ),
+              FooterText(
+                string: 'Remade by void#7066',
               ),
             ],
           ),
