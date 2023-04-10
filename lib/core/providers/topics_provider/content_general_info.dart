@@ -1,13 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final topicsInfoProvider = Provider(
+final availableContentProvider = Provider(
   (ref) {
     return [
+      'Home',
+      'Credits',
       'New Player',
       'Boost',
       'Farming List',
       'Reputation',
-      'Credits',
       'Classes',
       'Items',
       'Story',
@@ -19,6 +20,18 @@ final topicsInfoProvider = Provider(
       'Enhancing',
       'Membership',
       'Ultra Bosses',
+      'Wheel of Doom',
     ];
+  },
+);
+
+final Provider<List<String>> contentRoutesProvider = Provider(
+  (ref) {
+    final list = ref.watch(availableContentProvider);
+
+    for (var element in list) {
+      element.toLowerCase();
+    }
+    return list;
   },
 );

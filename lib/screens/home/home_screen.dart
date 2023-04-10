@@ -12,9 +12,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: LayoutBuilder(builder: (context, constraints) {
-        // nao pergunta o pq
         final gridViewCenterPadding = constraints.maxWidth / 7;
-        //foi a unica coisa que funcionou
+        //? nao pergunta o pq, foi a unica coisa que funcionou
 
         return Scaffold(
           body: BlurredImageBackground(

@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:travel_seila/screens/credits_screen/credits_screen.dart';
 import 'package:travel_seila/screens/home/home_screen.dart';
 import 'package:travel_seila/screens/new_player/new_player_screen.dart';
 
@@ -10,6 +11,11 @@ class Routes {
         name: 'home',
         path: '/',
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        name: 'credits',
+        path: '/credits',
+        builder: (context, state) => CreditsScreen(),
       ),
       GoRoute(
         name: 'new player',

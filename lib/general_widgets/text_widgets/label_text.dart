@@ -6,14 +6,16 @@ class LabelText extends StatelessWidget {
   const LabelText({
     Key? key,
     required this.string,
+    this.padding = PaddingMeasure.m,
   }) : super(key: key);
 
   final String string;
+  final double padding;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: PaddingMeasure.m),
+      padding: EdgeInsets.symmetric(vertical: padding),
       child: RichText(
         text: TextSpan(
           text: string,

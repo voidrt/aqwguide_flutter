@@ -20,12 +20,12 @@ class PageTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlurredImageBackground(
       assetImage: backgroundImage ?? 'fantasy 1.png',
-      blurLevel: 10,
+      blurLevel: backgroundImageBlur ?? 10,
       height: constraints.maxHeight / 2,
       width: constraints.maxWidth,
       child: Container(
         height: constraints.maxHeight,
-        padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.exg),
+        padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.xxl),
         child: Center(
           child: Text(
             pageTitle,

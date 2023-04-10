@@ -5,6 +5,6 @@ class PaddingMeasure {
   static const double defaultSize = 16;
   static const double g = 24;
   static const double gg = 32;
-  static const double xl = 48;
-  static const double exg = 56;
+  static const double exg = 48;
+  static const double xxl = 56;
 }

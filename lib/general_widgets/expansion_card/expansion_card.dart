@@ -35,14 +35,14 @@ class ExpansionCardWidget extends StatelessWidget {
         color: AppColors.textWhite,
       ),
       childrenPadding: const EdgeInsets.only(
-        left: PaddingMeasure.exg * 1.4,
-        right: PaddingMeasure.exg * 1.8,
+        left: PaddingMeasure.xxl * 1.4,
+        right: PaddingMeasure.xxl * 1.8,
         bottom: PaddingMeasure.g,
       ),
       tilePadding: const EdgeInsets.fromLTRB(
-        PaddingMeasure.exg * 1.4, //left
+        PaddingMeasure.xxl * 1.4, //left
         PaddingMeasure.g, //top
-        PaddingMeasure.exg * 1.4, //right
+        PaddingMeasure.xxl * 1.4, //right
         PaddingMeasure.p, //bottom
       ),
       children: [

@@ -43,6 +43,12 @@ class AppTheme {
       backgroundColor: AppColors.background,
       collapsedBackgroundColor: AppColors.background,
     ),
+    navigationRailTheme: const NavigationRailThemeData(
+      backgroundColor: AppColors.primary,
+      elevation: 1,
+      groupAlignment: -1,
+      indicatorColor: AppColors.secondary,
+    ),
     textTheme: const TextTheme().copyWith(
       titleLarge: TextStyles.pageTitle,
       labelLarge: TextStyles.labelTitle,

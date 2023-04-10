@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:travel_seila/core/providers/page_provider/page_info_provider.dart';
 import 'package:travel_seila/general_widgets/generic_screen/generic_screen.dart';
 import 'package:travel_seila/models/page_info_model.dart';
-import 'package:travel_seila/general_widgets/error_page/error_page.dart';
-import 'package:travel_seila/general_widgets/loading_widget/loading_widget.dart';
+import 'package:travel_seila/screens/error_page/error_page.dart';
+import 'package:travel_seila/screens/loading_page/loading_widget.dart';
 import 'package:travel_seila/general_widgets/scaffold_custom/scaffold_custom.dart';
 
 class NewPlayerScreen extends ConsumerWidget {
@@ -27,7 +27,7 @@ class NewPlayerScreen extends ConsumerWidget {
           builder: (context, constraints) {
             return ScaffoldWithSideMenu(
               constraints: constraints,
-              pageIndex: 1,
+              pageIndex: 2,
               child: GenericPageLayout(
                 pageTitle: pageTitle,
                 pageTopics: topics,

@@ -16,7 +16,7 @@ class PlainText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: isInParagraph ? PaddingMeasure.exg : 0),
+      padding: EdgeInsets.only(right: isInParagraph ? PaddingMeasure.xxl : 0),
       child: isSelectable
           ? SelectableText(
               string,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/core/providers/topics_provider/topics_properties.dart';
+import 'package:travel_seila/core/providers/topics_provider/content_general_info.dart';
 import 'package:travel_seila/screens/home/grid_view/gridview_item.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -16,7 +16,7 @@ class HomeGridView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: constraints.maxWidth / 2,
-      margin: const EdgeInsets.only(right: PaddingMeasure.exg),
+      margin: const EdgeInsets.only(right: PaddingMeasure.xxl),
       child: AlignedGrid(
         constraints: constraints,
       ),
@@ -37,8 +37,9 @@ class AlignedGrid extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final List<String> contentNames = ref.watch(contentNamesProvider);
-    final List<String> contentRoutes = ref.watch(contentRoutesProvider);
+    final contentNames = ref.watch(availableContentProvider).sublist(2);
+    final contentRoutes = ref.watch(contentRoutesProvider).sublist(2);
+    //? Sublisting because Home and Credits dont need to show up here
 
     final widgetWidth =
         (constraints.maxWidth - mainAxisSpacing * (columns - 1)) / columns;
