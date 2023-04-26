@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/widgets/text_widgets/plain_text.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/widgets/text_widgets/plain_text.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class CreditText extends StatelessWidget {
@@ -24,6 +24,15 @@ class CreditText extends StatelessWidget {
             padding: PaddingMeasure.pp,
           ),
           PlainText(string: name),
+          const Padding(
+            padding: EdgeInsets.only(
+              top: PaddingMeasure.m,
+            ),
+            child: Divider(
+              indent: PaddingMeasure.xxl * 3.5,
+              endIndent: PaddingMeasure.xxl * 3.5,
+            ),
+          ),
         ],
       ),
     );

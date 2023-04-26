@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/text_widgets/footer_text.dart';
+import 'package:travel_seila/widgets/text_widgets/footer_text.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -9,7 +9,7 @@ class PageFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 80,
       width: MediaQuery.of(context).size.width,
       color: AppColors.darkGrey500,
       child: Center(
@@ -21,10 +21,11 @@ class PageFooter extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               FooterText(
-                string: 'For the community, by the community',
+                string:
+                    'For feedback and / or reporting bugs, message: void#7066',
               ),
               FooterText(
-                string: 'Remade by void#7066',
+                string: 'By the community, for the community',
               ),
             ],
           ),

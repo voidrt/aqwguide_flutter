@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/general_widgets/scaffold_custom/scaffold_custom.dart';
-import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/general_widgets/text_widgets/plain_text.dart';
+import 'package:travel_seila/widgets/scaffold_custom/scaffold_custom.dart';
+import 'package:travel_seila/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/widgets/text_widgets/plain_text.dart';
 
 class ErrorPageWidget extends ConsumerWidget {
   const ErrorPageWidget({

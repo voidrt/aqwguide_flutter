@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/scaffold_custom/scaffold_custom.dart';
+import 'package:travel_seila/widgets/scaffold_custom/scaffold_custom.dart';
 import 'package:travel_seila/themes/colors.dart';
 
 class LoadingWidget extends StatelessWidget {

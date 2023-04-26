@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_seila/core/providers/topics_provider/content_general_info.dart';
-import 'package:travel_seila/general_widgets/scroll_physics.dart/ajustable_scroll.dart';
-import 'package:travel_seila/general_widgets/sidemenu/sidemenu_title.dart';
-import 'package:travel_seila/general_widgets/sidemenu/sidemenu_destinations_list.dart';
+import 'package:travel_seila/widgets/scroll_physics.dart/ajustable_scroll.dart';
+import 'package:travel_seila/widgets/sidemenu/sidemenu_title.dart';
+import 'package:travel_seila/widgets/sidemenu/sidemenu_destinations_list.dart';
 
 class SideMenu extends ConsumerStatefulWidget {
   SideMenu({

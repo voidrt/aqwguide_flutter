@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:travel_seila/general_widgets/text_widgets/aqwg_title.dart';
+import 'package:travel_seila/widgets/text_widgets/aqwg_title.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 

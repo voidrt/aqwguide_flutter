@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/blurred_image_widget/blurred_image.dart';
+import 'package:travel_seila/widgets/blurred_image_widget/blurred_image.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class PageTitle extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/sidemenu/sidemenu.dart';
+import 'package:travel_seila/widgets/sidemenu/sidemenu.dart';
 import 'package:travel_seila/themes/colors.dart';
 
 class ScaffoldWithSideMenu extends StatelessWidget {

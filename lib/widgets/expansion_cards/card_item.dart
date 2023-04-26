@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/general_widgets/paragraph_list/paragraph_text_list.dart';
-import 'package:travel_seila/general_widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/models/page_info_model.dart';
+import 'package:travel_seila/widgets/paragraph_list/paragraph_text_list.dart';
+import 'package:travel_seila/widgets/text_widgets/label_text.dart';
+import 'package:travel_seila/core/models/sections_and_topics.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -9,11 +9,11 @@ class ExpansionCardWidget extends StatelessWidget {
   const ExpansionCardWidget({
     Key? key,
     required this.cardTitle,
-    required this.cardSubtopics,
+    required this.cardTopics,
   }) : super(key: key);
 
   final String cardTitle;
-  final List<PageSubtopic> cardSubtopics;
+  final List<Topic> cardTopics;
 
   @override
   Widget build(BuildContext context) {
@@ -47,13 +47,13 @@ class ExpansionCardWidget extends StatelessWidget {
       ),
       children: [
         ...List.generate(
-          cardSubtopics.length,
+          cardTopics.length,
           (index) {
-            final subtopic = cardSubtopics[index];
+            final topic = cardTopics[index];
 
             return ParagraphTextList(
-              topicTitle: subtopic.subtopicTitle,
-              texts: subtopic.texts,
+              topicTitle: topic.topicTitle,
+              texts: topic.texts,
             );
           },
         ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:travel_seila/core/providers/page_provider/page_info_provider.dart';
-import 'package:travel_seila/general_widgets/generic_screen/generic_screen.dart';
-import 'package:travel_seila/models/page_info_model.dart';
+import 'package:travel_seila/widgets/generic_screen/generic_screen.dart';
+import 'package:travel_seila/core/models/page_info_model.dart';
+import 'package:travel_seila/core/models/sections_and_topics.dart';
 import 'package:travel_seila/screens/error_page/error_page.dart';
 import 'package:travel_seila/screens/loading_page/loading_widget.dart';
-import 'package:travel_seila/general_widgets/scaffold_custom/scaffold_custom.dart';
+import 'package:travel_seila/widgets/scaffold_custom/scaffold_custom.dart';
 
 class NewPlayerScreen extends ConsumerWidget {
   const NewPlayerScreen({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class NewPlayerScreen extends ConsumerWidget {
     return pageInfo.when(
       data: (page) {
         final String pageTitle = page.title;
-        final List<PageTopic> topics = page.topics;
+        final List<InfoSection> topics = page.topics;
 
         return LayoutBuilder(
           builder: (context, constraints) {
@@ -30,9 +31,10 @@ class NewPlayerScreen extends ConsumerWidget {
               pageIndex: 2,
               child: GenericPageLayout(
                 pageTitle: pageTitle,
-                pageTopics: topics,
+                pageInfo: topics,
                 backgroundImage: newPlayerBackgroundImage,
                 constraints: constraints,
+                backgroundImageBlur: 15,
               ),
             );
           },
