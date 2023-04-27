@@ -26,7 +26,7 @@ class HomeScreen extends ConsumerWidget {
               return Scaffold(
                 body: BlurredImageBackground(
                   assetImage: backgroundImage ?? 'nulgath.png',
-                  blurLevel: 5,
+                  blurLevel: 7,
                   height: constraints.maxHeight,
                   width: constraints.maxWidth,
                   child: Row(

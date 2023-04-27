@@ -34,7 +34,7 @@ class NewPlayerScreen extends ConsumerWidget {
                 pageInfo: topics,
                 backgroundImage: newPlayerBackgroundImage,
                 constraints: constraints,
-                backgroundImageBlur: 15,
+                backgroundImageBlur: 10,
               ),
             );
           },

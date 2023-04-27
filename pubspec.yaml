@@ -17,6 +17,7 @@ dependencies:
   go_router: ^6.2.0
   http: ^0.13.5
   expansion_card: ^0.1.0
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +31,7 @@ flutter:
     - assets/images/
     - assets/fonts/
     - assets/data/aqwguide.dart
+    - assets/homescreen_images/
   fonts:
   - family: Montserrat
     fonts:

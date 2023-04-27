@@ -2,13 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart';
-import 'package:travel_seila/core/constants/constants.dart';
+import 'package:travel_seila/core/utils/utils.dart';
 import 'package:travel_seila/core/models/page_info_model.dart';
 
 final guidePageModelProvider = FutureProviderFamily<PageModel, String>(
   (ref, pageName) async {
     final Response response = await get(
-      Uri.parse('${Constants.aqwikiURL}$pageName'),
+      Uri.parse('${Utils.aqwikiURL}$pageName'),
     );
 
     if (response.statusCode == 200) {
