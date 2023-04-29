@@ -1,3 +1,5 @@
+library random_image_selector;
+
 import 'dart:io';
 import 'dart:math';
 
@@ -7,13 +9,13 @@ extension FileExtention on FileSystemEntity {
   }
 }
 
-Future<String> rndBackgroundImage() async {
+Future<String> getRandomImage(String directoryPath) async {
   final String randomImage;
   final Random random = Random();
-  final dir = Directory('./assets/homescreen_images/');
+  final dir = Directory(directoryPath);
   final List<String> assetImages = await dir.list().map(
-    (event) {
-      return event.name;
+    (file) {
+      return file.name;
     },
   ).toList();
 

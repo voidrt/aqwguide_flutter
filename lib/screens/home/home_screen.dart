@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:travel_seila/screens/home/random_back_image/random_back_image.dart';
+import 'package:random_image_selector/random_image_selector.dart';
 import 'package:travel_seila/widgets/blurred_image_widget/blurred_image.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu.dart';
 import 'package:travel_seila/screens/home/grid_view/home_gridview.dart';
@@ -15,7 +15,7 @@ class HomeScreen extends ConsumerWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return FutureBuilder<String>(
-            future: rndBackgroundImage(),
+            future: getRandomImage('./assets/homescreen_images/'),
             builder: (context, snapshot) {
               if (!snapshot.hasData) return Container();
 
