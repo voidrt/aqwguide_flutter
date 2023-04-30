@@ -11,7 +11,7 @@ import 'package:travel_seila/widgets/scaffold_custom/scaffold_custom.dart';
 class NewPlayerScreen extends ConsumerWidget {
   const NewPlayerScreen({Key? key}) : super(key: key);
 
-  final String newPlayerBackgroundImage = 'fantasy 3.png';
+  final String newPlayerBackgroundImage = 'Dragonslayer.png';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

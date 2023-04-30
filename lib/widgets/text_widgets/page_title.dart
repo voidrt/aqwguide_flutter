@@ -19,7 +19,7 @@ class PageTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlurredImageBackground(
-      assetImage: backgroundImage ?? 'fantasy 1.png',
+      assetImage: backgroundImage ?? 'Valley_landscape.png',
       blurLevel: backgroundImageBlur ?? 10,
       height: constraints.maxHeight / 2,
       width: constraints.maxWidth,

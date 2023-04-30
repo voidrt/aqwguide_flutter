@@ -43,8 +43,8 @@ class CreditsScreen extends StatelessWidget {
           children: [
             PageTitle(
               pageTitle: 'Credits',
-              backgroundImage: 'fantasy 1.png',
-              backgroundImageBlur: 5,
+              backgroundImage: 'Credits.png',
+              backgroundImageBlur: 0,
               constraints: constraints,
             ),
             const SizedBox(

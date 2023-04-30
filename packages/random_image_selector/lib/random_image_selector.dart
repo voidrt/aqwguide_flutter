@@ -13,6 +13,7 @@ Future<String> getRandomImage(String directoryPath) async {
   final String randomImage;
   final Random random = Random();
   final dir = Directory(directoryPath);
+
   final List<String> assetImages = await dir.list().map(
     (file) {
       return file.name;
