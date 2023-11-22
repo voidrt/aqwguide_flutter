@@ -29,7 +29,10 @@ class PageTitle extends StatelessWidget {
         child: Center(
           child: Text(
             pageTitle,
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context)
+                .textTheme
+                .titleLarge!
+                .copyWith(fontFamily: 'Ubuntu'),
           ),
         ),
       ),

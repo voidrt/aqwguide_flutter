@@ -47,6 +47,7 @@ class _SideMenuState extends ConsumerState<SideMenu> {
         constraints: BoxConstraints(
           minHeight: mediaQuerySize.height,
           maxWidth: mediaQuerySize.width / 5,
+          minWidth: mediaQuerySize.width / 10,
         ),
         child: IntrinsicHeight(
           child: NavigationRail(

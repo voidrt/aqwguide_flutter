@@ -37,12 +37,21 @@ flutter:
   fonts:
   - family: Montserrat
     fonts:
-      - asset: assets/fonts/Montserrat-Light.ttf
+      - asset: assets/fonts/montserrat/Montserrat-Light.ttf
         weight: 400
-      - asset: assets/fonts/Montserrat-Regular.ttf
+      - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
         weight: 500
-      - asset: assets/fonts/Montserrat-Bold.ttf
+      - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
         weight: 700
-      - asset: assets/fonts/Montserrat-BoldItalic.ttf
+      - asset: assets/fonts/montserrat/Montserrat-BoldItalic.ttf
         style: italic
-  
+  - family: Ubuntu
+    fonts:
+      - asset: assets/fonts/ubuntu/Ubuntu-Light.ttf
+        weight: 500
+      - asset: assets/fonts/ubuntu/Ubuntu-Regular.ttf
+        weight: 600
+      - asset: assets/fonts/ubuntu/Ubuntu-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/ubuntu/Ubuntu-BoldItalic.ttf
+        style: italic

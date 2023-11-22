@@ -6,7 +6,7 @@ import 'text_themes.dart';
 
 class AppTheme {
   static var appTheme = ThemeData(
-    fontFamily: 'Montserrat',
+    fontFamily: 'Ubuntu',
     useMaterial3: true,
     platform: TargetPlatform.windows,
     primaryColor: AppColors.primary,

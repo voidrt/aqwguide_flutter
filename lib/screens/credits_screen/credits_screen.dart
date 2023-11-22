@@ -57,7 +57,7 @@ class CreditsScreen extends StatelessWidget {
                 names: namesCreditList[index]['names']!,
               ),
             ),
-            ArtistCreditList(),
+            const ArtistCreditList(),
             const SizedBox(
               height: 100,
             ),

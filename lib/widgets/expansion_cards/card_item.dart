@@ -5,7 +5,7 @@ import 'package:travel_seila/core/models/sections_and_topics.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
-class ExpansionCardWidget extends StatelessWidget {
+class ExpansionCardWidget extends StatefulWidget {
   const ExpansionCardWidget({
     Key? key,
     required this.cardTitle,
@@ -16,21 +16,33 @@ class ExpansionCardWidget extends StatelessWidget {
   final List<Topic> cardTopics;
 
   @override
+  State<ExpansionCardWidget> createState() => _ExpansionCardWidgetState();
+}
+
+class _ExpansionCardWidgetState extends State<ExpansionCardWidget> {
+  late bool isActive = false;
+
+  @override
   Widget build(BuildContext context) {
     return ExpansionTile(
+      onExpansionChanged: (val) => setState(() {
+        isActive = val;
+      }),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          LabelText(string: cardTitle),
+          LabelText(string: widget.cardTitle),
           const Divider(
             thickness: 0.5,
             height: 1,
           ),
         ],
       ),
-      trailing: const Icon(
-        Icons.keyboard_arrow_down_rounded,
+      trailing: Icon(
+        isActive
+            ? Icons.keyboard_arrow_up_rounded
+            : Icons.keyboard_arrow_down_rounded,
         size: 20,
         color: AppColors.textWhite,
       ),
@@ -47,9 +59,9 @@ class ExpansionCardWidget extends StatelessWidget {
       ),
       children: [
         ...List.generate(
-          cardTopics.length,
+          widget.cardTopics.length,
           (index) {
-            final topic = cardTopics[index];
+            final topic = widget.cardTopics[index];
 
             return ParagraphTextList(
               topicTitle: topic.topicTitle,

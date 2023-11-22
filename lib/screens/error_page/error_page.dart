@@ -28,7 +28,6 @@ class ErrorPageWidget extends ConsumerWidget {
                     'An error has occured with our API, please check in later',
               ),
               PlainText(
-                isSelectable: true,
                 isInParagraph: false,
                 string: 'Error: $error',
               ),
@@ -38,7 +37,6 @@ class ErrorPageWidget extends ConsumerWidget {
                   horizontal: 100,
                 ),
                 child: PlainText(
-                  isSelectable: true,
                   string: stackTrace.toString(),
                 ),
               ),

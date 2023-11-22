@@ -10,11 +10,8 @@ class FooterText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        PaddingMeasure.pp,
-        PaddingMeasure.pp,
-        PaddingMeasure.pp,
-        0,
+      padding: const EdgeInsets.all(
+        PaddingMeasure.m,
       ),
       child: SelectableText(
         string,
