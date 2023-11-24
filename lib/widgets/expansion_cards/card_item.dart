@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_seila/widgets/paragraph_list/paragraph_text_list.dart';
 import 'package:travel_seila/widgets/text_widgets/label_text.dart';
-import 'package:travel_seila/core/models/sections_and_topics.dart';
 import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
@@ -9,11 +7,11 @@ class ExpansionCardWidget extends StatefulWidget {
   const ExpansionCardWidget({
     Key? key,
     required this.cardTitle,
-    required this.cardTopics,
+    required this.child,
   }) : super(key: key);
 
   final String cardTitle;
-  final List<Topic> cardTopics;
+  final Widget child;
 
   @override
   State<ExpansionCardWidget> createState() => _ExpansionCardWidgetState();
@@ -28,6 +26,7 @@ class _ExpansionCardWidgetState extends State<ExpansionCardWidget> {
       onExpansionChanged: (val) => setState(() {
         isActive = val;
       }),
+      maintainState: true,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -57,19 +56,7 @@ class _ExpansionCardWidgetState extends State<ExpansionCardWidget> {
         PaddingMeasure.xxl * 1.4, //right
         PaddingMeasure.p, //bottom
       ),
-      children: [
-        ...List.generate(
-          widget.cardTopics.length,
-          (index) {
-            final topic = widget.cardTopics[index];
-
-            return ParagraphTextList(
-              topicTitle: topic.topicTitle,
-              texts: topic.texts,
-            );
-          },
-        ),
-      ],
+      children: [widget.child],
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 import 'package:travel_seila/widgets/text_widgets/label_text.dart';
 import 'package:travel_seila/widgets/text_widgets/plain_text.dart';
@@ -28,6 +29,7 @@ class ArtistCreditList extends StatelessWidget {
                 HyperlinkedPlainText(
                   string: art["autor"],
                   link: Uri.parse(art["link"]),
+                  textColor: AppColors.secondary,
                 ),
               ],
             ),

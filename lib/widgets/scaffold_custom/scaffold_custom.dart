@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_seila/widgets/page_footer/page_footer.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu.dart';
 import 'package:travel_seila/themes/colors.dart';
 
@@ -37,7 +38,9 @@ class ScaffoldWithSideMenu extends StatelessWidget {
               Expanded(
                 flex: expandedFlex ?? 1,
                 child: SingleChildScrollView(
-                  child: child,
+                  child: Column(
+                    children: [child, const PageFooter()],
+                  ),
                 ),
               )
             ],
