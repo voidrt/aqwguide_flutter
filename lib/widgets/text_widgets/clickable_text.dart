@@ -6,10 +6,12 @@ class HyperLinkPlainText extends StatelessWidget {
     Key? key,
     required this.string,
     required this.linkedRoute,
+    this.textColor,
   }) : super(key: key);
 
   final String string;
   final String linkedRoute;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +19,10 @@ class HyperLinkPlainText extends StatelessWidget {
       onTap: () => context.goNamed(linkedRoute),
       child: Text(
         string,
-        style: Theme.of(context).textTheme.bodySmall!.copyWith(
-              decoration: TextDecoration.underline,
-            ),
+        style: Theme.of(context)
+            .textTheme
+            .bodySmall!
+            .copyWith(decoration: TextDecoration.underline, color: textColor),
       ),
     );
   }

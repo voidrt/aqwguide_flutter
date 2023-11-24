@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:travel_seila/core/providers/topics_provider/content_general_info.dart';
+import 'package:travel_seila/core/providers/content_general_info.dart';
 import 'package:travel_seila/widgets/scroll_physics.dart/ajustable_scroll.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu_title.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu_destinations_list.dart';
@@ -25,10 +25,8 @@ class _SideMenuState extends ConsumerState<SideMenu> {
   Widget build(
     BuildContext context,
   ) {
-    final List<String> contentNames = ref.watch(availableContentProvider);
-    final List<String> contentRoutes = ref.watch(contentRoutesProvider);
-
     final Size mediaQuerySize = MediaQuery.of(context).size;
+    final contentRoutes = ref.watch(contentRoutesProvider);
 
     void navigateToDestination(int index) {
       setState(
@@ -55,7 +53,9 @@ class _SideMenuState extends ConsumerState<SideMenu> {
             onDestinationSelected: navigateToDestination,
             selectedIndex: widget.selectedIndex,
             leading: const SideMenuTitle(),
-            destinations: generateAllDestination(contentNames),
+            destinations: generateAllDestination(
+              ref.watch(availableContentProvider),
+            ),
           ),
         ),
       ),

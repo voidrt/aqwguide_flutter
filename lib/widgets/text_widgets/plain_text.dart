@@ -39,10 +39,12 @@ class HyperlinkedPlainText extends StatelessWidget {
     Key? key,
     required this.string,
     required this.link,
+    this.textColor,
   }) : super(key: key);
 
   final String string;
   final Uri link;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,9 @@ class HyperlinkedPlainText extends StatelessWidget {
       string,
       style: Theme.of(context).textTheme.bodySmall!.copyWith(
             decoration: TextDecoration.underline,
-            decorationColor: AppColors.textWhite.withOpacity(0.7),
+            decorationColor: textColor?.withOpacity(0.7) ??
+                AppColors.textWhite.withOpacity(0.7),
+            color: textColor ?? AppColors.textWhite,
           ),
       onTap: () => Utils.launchUrlInBrowser(link),
     );
