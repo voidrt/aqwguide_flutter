@@ -7,7 +7,7 @@ class ParagraphCustom extends StatelessWidget {
     required this.spans,
   });
 
-  final spans;
+  final List<TextSpan> spans;
 
   @override
   Widget build(BuildContext context) {
