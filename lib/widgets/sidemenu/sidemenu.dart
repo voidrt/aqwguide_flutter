@@ -26,14 +26,14 @@ class _SideMenuState extends ConsumerState<SideMenu> {
     BuildContext context,
   ) {
     final Size mediaQuerySize = MediaQuery.of(context).size;
-    final contentRoutes = ref.watch(contentRoutesProvider);
+    final contentRoutes = ref.watch(availableContentProvider);
 
     void navigateToDestination(int index) {
       setState(
         () {
           widget.selectedIndex = index;
           context.goNamed(
-            contentRoutes[index],
+            contentRoutes[index].toLowerCase(),
           );
         },
       );

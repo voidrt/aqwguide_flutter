@@ -38,7 +38,7 @@ class AlignedGrid extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final contentNames = ref.watch(availableContentProvider).sublist(2);
-    final contentRoutes = ref.watch(contentRoutesProvider).sublist(2);
+
     //? Sublisting because Home and Credits dont need to show up here
 
     final widgetWidth =
@@ -54,7 +54,7 @@ class AlignedGrid extends ConsumerWidget {
           (index) {
             return GridViewItem(
               label: contentNames[index],
-              widgetRoute: contentRoutes[index],
+              widgetRoute: contentNames[index].toLowerCase(),
               width: widgetWidth,
             );
           },
