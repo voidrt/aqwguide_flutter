@@ -36,7 +36,10 @@ class Information extends StatelessWidget {
                   ),
                   TextSpan(
                     text: 'Health Points (HP)',
-                    style: plainText.copyWith(color: AppColors.healthRed),
+                    style: plainText.copyWith(
+                      color: AppColors.healthRed,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   const TextSpan(
                     text: '. You lose HP by being attacked.',
@@ -48,7 +51,10 @@ class Information extends StatelessWidget {
                   const TextSpan(text: ' The Blue Bar shows your '),
                   TextSpan(
                     text: 'Mana Points (MP)',
-                    style: plainText.copyWith(color: AppColors.manaBlue),
+                    style: plainText.copyWith(
+                      color: AppColors.manaBlue,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   const TextSpan(
                     text: '. This resource is used for your skills.',
@@ -60,7 +66,10 @@ class Information extends StatelessWidget {
                   const TextSpan(text: ' The Green Bar shows your '),
                   TextSpan(
                     text: 'Stamina Points (SP)',
-                    style: plainText.copyWith(color: AppColors.staminaGreen),
+                    style: plainText.copyWith(
+                      color: AppColors.staminaGreen,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   const TextSpan(
                     text:
@@ -75,7 +84,146 @@ class Information extends StatelessWidget {
             ],
           ),
           //? XP AND CURRENCY
-          const ParagraphCustom(spans: [])
+          const ParagraphCustom(
+            spans: [
+              TextSpan(
+                text: 'These are the point and currency systems in the game:',
+              ),
+            ],
+          ),
+          //? Experience
+          ParagraphCustom(
+            customBullet: '1. ',
+            indentLevel: 1,
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Experience Points ',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  TextSpan(
+                    text: '(XP)',
+                    style: plainText.copyWith(
+                      color: AppColors.secondary,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nTo level up, you gain XP by defeating enemies and completing quests - currently, the level limit is 100. You can find the best methods of getting XP in the XP Section below.',
+                  )
+                ],
+              ),
+            ],
+          ),
+          //? Class Points
+          ParagraphCustom(
+            customBullet: '2. ',
+            indentLevel: 1,
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Class Points ',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  TextSpan(
+                    text: '(CP)',
+                    style: plainText.copyWith(
+                      color: AppColors.classRed,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThese are like XP but just for your class - when you defeat enemies, it ranks up the class you have equipped up to Rank 10. Extra abilities and passives are unlocked the higher your rank is. The amount of CP you earn is based on the enemy\'s level, just like XP.',
+                  )
+                ],
+              ),
+            ],
+          ),
+          //? Reputation
+          ParagraphCustom(
+            customBullet: '3. ',
+            indentLevel: 1,
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Reputation ',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  TextSpan(
+                    text: '(REP)',
+                    style: plainText.copyWith(
+                      color: AppColors.repGreen,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThis is obtained from quests and is used to gain points with in-game factions (like Good, Evil, and Chaos) up to Rank 10. Some classes in the game require Rank 10 with a certain faction.',
+                  )
+                ],
+              ),
+            ],
+          ),
+          //? Gold
+          ParagraphCustom(
+            customBullet: '4. ',
+            indentLevel: 1,
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Gold ',
+                    style: plainText.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  TextSpan(
+                    text: '(GP)',
+                    style: plainText.copyWith(
+                      color: AppColors.gold,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThis is the base currency of the game and is used to buy many things. It\'s rewarded like XP - through kills and quests. The Gold cap is 100 million.',
+                  )
+                ],
+              ),
+            ],
+          ),
+          ParagraphCustom(
+            customBullet: '4. ',
+            indentLevel: 1,
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Adventure Coins ',
+                    style: plainText.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  TextSpan(
+                    text: '(AC)',
+                    style: plainText.copyWith(
+                      color: AppColors.adventureCoin,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThese are the paid currency in AQW. They are required or help to get many of the nicer items and classes in the game. 1500 ACs are given out each year for free in January (Honourable Hero - don\'t get muted or banned!), October (Birthday), and December (Frostval). You need to log in for those periods and have a confirmed email to receive them.',
+                  )
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );

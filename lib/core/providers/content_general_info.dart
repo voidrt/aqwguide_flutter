@@ -24,14 +24,3 @@ final availableContentProvider = Provider(
     ];
   },
 );
-
-final Provider<List<String>> contentRoutesProvider = Provider(
-  (ref) {
-    final list = ref.watch(availableContentProvider);
-
-    for (var element in list) {
-      element.toLowerCase();
-    }
-    return list;
-  },
-);
