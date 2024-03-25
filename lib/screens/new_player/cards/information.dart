@@ -83,6 +83,7 @@ class Information extends StatelessWidget {
               ),
             ],
           ),
+
           //? XP AND CURRENCY
           const ParagraphCustom(
             spans: [
@@ -197,6 +198,7 @@ class Information extends StatelessWidget {
               ),
             ],
           ),
+          //? Adventure Coins
           ParagraphCustom(
             customBullet: '4. ',
             indentLevel: 1,
@@ -220,6 +222,152 @@ class Information extends StatelessWidget {
                     text:
                         '\nThese are the paid currency in AQW. They are required or help to get many of the nicer items and classes in the game. 1500 ACs are given out each year for free in January (Honourable Hero - don\'t get muted or banned!), October (Birthday), and December (Frostval). You need to log in for those periods and have a confirmed email to receive them.',
                   )
+                ],
+              ),
+            ],
+          ),
+
+          //? Item categories
+          const ParagraphCustom(
+            indentLevel: 0,
+            spans: [
+              TextSpan(
+                text: 'For the most part, items are categorised as either:',
+              ),
+            ],
+          ),
+          //? Non-Rare
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '1. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Permanent/Non-Rare',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text: '\nThis covers any item that is always obtainable.',
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //? Seasonal
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '2. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Seasonal',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThese items are only available at a certain time/month each year.',
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //? Rare
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '3. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Rare',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThese items are available for a short time then permanently leave the game. However, there may be future reskins of them if it\'s a cosmetic.',
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //? Pseudo-Rare
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '4. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Pseudo-Rare',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThere is another type of Rare called Pseudo-Rare where an item can still be obtained but a requirement for it is Rare.',
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //? Special Offer
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '5. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Special Offer',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThese are items that are obtained by purchasing something, usually through Heromart or by buying ACs or membership. They are claimed from within the Book of Lore, which is the Book icon button.',
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //? Member
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '6. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Member',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThis is an item sub-category, meaning it can also be any of the above item types. An item with yellow text can only be bought and used by people who have membership',
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //? AC
+          ParagraphCustom(
+            indentLevel: 1,
+            customBullet: '7. ',
+            spans: [
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'AC',
+                    style: plainText.copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nThis is another sub-category. AC items can be any of the above item-types but it would also have an AC tag, which looks like a gold dragon in a circle that says AC.',
+                  ),
+                  const TextSpan(
+                    text:
+                        '\nAC items can\'t be deleted but they can be banked for free (see below). The exception to this is Treasure Potions, which are rewarded from the Wheel of Doom and are unbankable to prevent a bug.',
+                  ),
                 ],
               ),
             ],

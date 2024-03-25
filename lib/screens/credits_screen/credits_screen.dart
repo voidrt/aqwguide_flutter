@@ -61,7 +61,6 @@ class CreditsScreen extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            const PageFooter(),
           ],
         ),
       );

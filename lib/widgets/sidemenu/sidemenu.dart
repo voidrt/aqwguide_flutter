@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_seila/core/providers/content_general_info.dart';
-import 'package:travel_seila/widgets/scroll_physics.dart/ajustable_scroll.dart';
-import 'package:travel_seila/widgets/sidemenu/sidemenu_title.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu_destinations_list.dart';
+import 'package:travel_seila/widgets/sidemenu/sidemenu_title.dart';
 
 class SideMenu extends ConsumerStatefulWidget {
   SideMenu({
@@ -32,32 +31,23 @@ class _SideMenuState extends ConsumerState<SideMenu> {
       setState(
         () {
           widget.selectedIndex = index;
-          context.goNamed(
-            contentRoutes[index].toLowerCase(),
-          );
         },
       );
     }
 
-    return SingleChildScrollView(
-      controller: AdjustableScrollController(),
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-          minHeight: mediaQuerySize.height,
-          maxWidth: mediaQuerySize.width / 5,
-          minWidth: mediaQuerySize.width / 10,
-        ),
-        child: IntrinsicHeight(
-          child: NavigationRail(
-            extended: true,
-            onDestinationSelected: navigateToDestination,
-            selectedIndex: widget.selectedIndex,
-            leading: const SideMenuTitle(),
-            destinations: generateAllDestination(
-              ref.watch(availableContentProvider),
-            ),
-          ),
-        ),
+    return SizedBox(
+      height: mediaQuerySize.height,
+      child: Column(
+        children: [
+          const SideMenuTitle(),
+          ...contentRoutes
+              .map(
+                (route) => Expanded(
+                  child: SideMenuDestinations(title: route),
+                ),
+              )
+              .toList()
+        ],
       ),
     );
   }

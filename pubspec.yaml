@@ -16,9 +16,11 @@ dependencies:
   shared_preferences: 
   go_router: 
   http: 
-  url_launcher: 
+  url_launcher:
+  bitsdojo_window:
   random_image_selector:
     path: packages/random_image_selector
+
 
 dev_dependencies:
   flutter_test:
