@@ -23,7 +23,7 @@ class Topic extends StatelessWidget {
           isSelectable: true,
         ),
         const SizedBox(
-          height: PaddingMeasure.p,
+          height: Paddings.small,
         ),
         ...paragraphs,
       ],

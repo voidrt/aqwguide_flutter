@@ -23,28 +23,25 @@ class ScaffoldWithSideMenu extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.background,
-        body: ConstrainedBox(
-          constraints: constraints,
-          child: Row(
-            children: [
-              SideMenu(
-                selectedIndex: pageIndex ?? 0,
-              ),
-              const VerticalDivider(
-                width: 1,
-                thickness: 1,
-                color: AppColors.textWhite,
-              ),
-              Expanded(
-                flex: expandedFlex ?? 1,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [child, const PageFooter()],
-                  ),
+        body: Row(
+          children: [
+            SideMenu(
+              selectedIndex: pageIndex ?? 0,
+            ),
+            const VerticalDivider(
+              width: 1,
+              thickness: 1,
+              color: AppColors.darkGrey1000,
+            ),
+            Expanded(
+              flex: expandedFlex ?? 5,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [child, const PageFooter()],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

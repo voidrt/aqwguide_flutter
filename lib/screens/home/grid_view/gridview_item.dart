@@ -33,7 +33,7 @@ class _GridViewItemState extends ConsumerState<GridViewItem> {
       ),
       child: Container(
         width: widget.width,
-        padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.pp),
+        padding: const EdgeInsets.symmetric(horizontal: Paddings.extraSmall),
         decoration: BoxDecoration(
           color: Colors.white10,
           border: Border.all(
@@ -44,7 +44,7 @@ class _GridViewItemState extends ConsumerState<GridViewItem> {
         ),
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: PaddingMeasure.pp),
+            padding: const EdgeInsets.symmetric(vertical: Paddings.extraSmall),
             child: Text(
               widget.label,
               textAlign: TextAlign.center,

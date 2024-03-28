@@ -25,7 +25,7 @@ class PageTitle extends StatelessWidget {
       width: constraints.maxWidth,
       child: Container(
         height: constraints.maxHeight,
-        padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.xxl),
+        padding: const EdgeInsets.symmetric(horizontal: Paddings.superDuperBig),
         child: Center(
           child: Text(
             pageTitle,

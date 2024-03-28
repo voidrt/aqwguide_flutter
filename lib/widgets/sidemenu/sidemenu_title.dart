@@ -24,7 +24,7 @@ class SideMenuTitle extends StatelessWidget {
           endIndent: 15,
           color: AppColors.textWhite,
         ),
-        const SizedBox(height: PaddingMeasure.m)
+        const SizedBox(height: Paddings.medium)
       ],
     );
   }

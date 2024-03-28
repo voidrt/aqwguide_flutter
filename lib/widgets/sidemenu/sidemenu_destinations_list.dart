@@ -15,26 +15,17 @@ class SideMenuDestinations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: PaddingMeasure.gg),
-      child: InkWell(
+      padding: const EdgeInsets.symmetric(horizontal: Paddings.defaultSize),
+      child: ListTile(
+        horizontalTitleGap: Paddings.small,
+        leading: const Icon(
+          Icons.arrow_forward_ios,
+          color: AppColors.textWhite,
+          size: 15,
+        ),
+        title: PlainText(string: title),
         onTap: () => context.goNamed(
           title.toLowerCase(),
-        ),
-        child: Row(
-          children: [
-            const Icon(
-              Icons.arrow_forward_ios,
-              color: AppColors.textWhite,
-              size: 15,
-            ),
-            const SizedBox(
-              width: PaddingMeasure.p,
-            ),
-            PlainText(
-              string: title,
-              isInParagraph: false,
-            ),
-          ],
         ),
       ),
     );

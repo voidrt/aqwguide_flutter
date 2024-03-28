@@ -12,7 +12,7 @@ class ArtistCreditList extends StatelessWidget {
     return Column(
       children: [
         const Padding(
-          padding: EdgeInsets.only(bottom: PaddingMeasure.pp),
+          padding: EdgeInsets.only(bottom: Paddings.extraSmall),
           child: InnerLabelText(
             string: 'Art',
           ),
@@ -20,7 +20,7 @@ class ArtistCreditList extends StatelessWidget {
         ...artistCreditsList.map(
           (art) => Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: PaddingMeasure.pp - 2,
+              vertical: Paddings.extraSmall - 2,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -37,12 +37,12 @@ class ArtistCreditList extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.only(
-            top: PaddingMeasure.m,
-            bottom: PaddingMeasure.p,
+            top: Paddings.medium,
+            bottom: Paddings.small,
           ),
           child: Divider(
-            indent: PaddingMeasure.xxl * 3.5,
-            endIndent: PaddingMeasure.xxl * 3.5,
+            indent: Paddings.superDuperBig * 3.5,
+            endIndent: Paddings.superDuperBig * 3.5,
           ),
         ),
       ],

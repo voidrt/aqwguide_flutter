@@ -11,7 +11,7 @@ class FooterText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(
-        PaddingMeasure.m,
+        Paddings.medium,
       ),
       child: SelectableText(
         string,

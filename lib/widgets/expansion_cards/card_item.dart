@@ -46,15 +46,15 @@ class _ExpansionCardWidgetState extends State<ExpansionCardWidget> {
         color: AppColors.textWhite,
       ),
       childrenPadding: const EdgeInsets.only(
-        left: PaddingMeasure.xxl * 1.4,
-        right: PaddingMeasure.xxl * 1.8,
-        bottom: PaddingMeasure.g,
+        left: Paddings.superDuperBig * 1.4,
+        right: Paddings.superDuperBig * 1.8,
+        bottom: Paddings.big,
       ),
       tilePadding: const EdgeInsets.fromLTRB(
-        PaddingMeasure.xxl * 1.4, //left
-        PaddingMeasure.g, //top
-        PaddingMeasure.xxl * 1.4, //right
-        PaddingMeasure.p, //bottom
+        Paddings.superDuperBig * 1.4, //left
+        Paddings.big, //top
+        Paddings.superDuperBig * 1.4, //right
+        Paddings.small, //bottom
       ),
       children: [widget.child],
     );

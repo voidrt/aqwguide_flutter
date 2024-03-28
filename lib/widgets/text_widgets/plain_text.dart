@@ -5,8 +5,8 @@ import 'package:travel_seila/themes/paddings.dart';
 
 class PlainText extends StatelessWidget {
   const PlainText({
-    Key? key,
     required this.string,
+    Key? key,
     this.isInParagraph = false,
     this.isSelectable = false,
   }) : super(key: key);
@@ -18,7 +18,8 @@ class PlainText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: isInParagraph ? PaddingMeasure.xxl : 0),
+      padding:
+          EdgeInsets.only(right: isInParagraph ? Paddings.superDuperBig : 0),
       child: isSelectable
           ? SelectableText(
               string,

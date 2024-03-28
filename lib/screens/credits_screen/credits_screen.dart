@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:travel_seila/screens/credits_screen/credits_list.dart';
-import 'package:travel_seila/widgets/page_footer/page_footer.dart';
 import 'package:travel_seila/widgets/scaffold_custom/scaffold_custom.dart';
 import 'package:travel_seila/widgets/text_widgets/page_title.dart';
 import 'package:travel_seila/screens/credits_screen/credit_text.dart';
@@ -48,7 +47,7 @@ class CreditsScreen extends StatelessWidget {
               constraints: constraints,
             ),
             const SizedBox(
-              height: PaddingMeasure.exg,
+              height: Paddings.extraBig,
             ),
             ...List.generate(
               namesCreditList.length,

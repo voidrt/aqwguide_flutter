@@ -30,7 +30,7 @@ class NewPlayerScreen extends ConsumerWidget {
               const Information(),
               const Classes(),
               const SizedBox(
-                height: PaddingMeasure.xxl * 2,
+                height: Paddings.superDuperBig * 2,
               ),
             ],
           ),

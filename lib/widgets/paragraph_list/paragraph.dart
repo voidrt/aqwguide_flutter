@@ -17,8 +17,8 @@ class ParagraphCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: PaddingMeasure.p,
-        horizontal: PaddingMeasure.defaultSize * indentLevel,
+        vertical: Paddings.small,
+        horizontal: Paddings.defaultSize * indentLevel,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

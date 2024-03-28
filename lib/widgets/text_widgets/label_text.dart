@@ -6,7 +6,7 @@ class LabelText extends StatelessWidget {
   const LabelText({
     Key? key,
     required this.string,
-    this.padding = PaddingMeasure.m,
+    this.padding = Paddings.medium,
   }) : super(key: key);
 
   final String string;

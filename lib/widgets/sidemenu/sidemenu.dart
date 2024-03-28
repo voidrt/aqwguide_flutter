@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:travel_seila/core/providers/content_general_info.dart';
+import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu_destinations_list.dart';
 import 'package:travel_seila/widgets/sidemenu/sidemenu_title.dart';
 
@@ -25,7 +25,7 @@ class _SideMenuState extends ConsumerState<SideMenu> {
     BuildContext context,
   ) {
     final Size mediaQuerySize = MediaQuery.of(context).size;
-    final contentRoutes = ref.watch(availableContentProvider);
+    final contentRoutes = ref.watch(availableContentProvider).sublist(1);
 
     void navigateToDestination(int index) {
       setState(
@@ -35,18 +35,20 @@ class _SideMenuState extends ConsumerState<SideMenu> {
       );
     }
 
-    return SizedBox(
-      height: mediaQuerySize.height,
+    return Container(
+      color: AppColors.darkGrey1000,
+      width: mediaQuerySize.width / 5,
       child: Column(
         children: [
           const SideMenuTitle(),
-          ...contentRoutes
-              .map(
-                (route) => Expanded(
-                  child: SideMenuDestinations(title: route),
-                ),
-              )
-              .toList()
+          Expanded(
+            child: ListView.builder(
+              itemCount: contentRoutes.length,
+              itemBuilder: (context, index) {
+                return SideMenuDestinations(title: contentRoutes[index]);
+              },
+            ),
+          ),
         ],
       ),
     );

@@ -16,7 +16,7 @@ class HomeGridView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       width: constraints.maxWidth / 2,
-      margin: const EdgeInsets.only(right: PaddingMeasure.xxl),
+      margin: const EdgeInsets.only(right: Paddings.superDuperBig),
       child: AlignedGrid(
         constraints: constraints,
       ),
@@ -31,8 +31,8 @@ class AlignedGrid extends ConsumerWidget {
   }) : super(key: key);
 
   final BoxConstraints constraints;
-  final double mainAxisSpacing = PaddingMeasure.defaultSize;
-  final double spacing = PaddingMeasure.g;
+  final double mainAxisSpacing = Paddings.defaultSize;
+  final double spacing = Paddings.big;
   final columns = 6;
 
   @override

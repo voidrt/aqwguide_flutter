@@ -19,10 +19,10 @@ class AppTheme {
     ),
     listTileTheme: const ListTileThemeData().copyWith(
       contentPadding: const EdgeInsets.symmetric(
-        vertical: PaddingMeasure.pp,
+        vertical: Paddings.extraSmall,
       ),
       enableFeedback: false,
-      horizontalTitleGap: PaddingMeasure.pp - 20,
+      horizontalTitleGap: Paddings.extraSmall - 20,
     ),
     iconTheme: const IconThemeData().copyWith(
       color: AppColors.textWhite,
