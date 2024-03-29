@@ -5,17 +5,28 @@ import 'package:travel_seila/themes/colors.dart';
 import 'package:travel_seila/themes/paddings.dart';
 
 class SideMenuTitle extends StatelessWidget {
-  const SideMenuTitle({Key? key}) : super(key: key);
+  const SideMenuTitle({
+    Key? key,
+    required this.isSelected,
+  }) : super(key: key);
+
+  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
+    final tileDecoration =
+        isSelected ? AppColors.secondary : AppColors.textWhite;
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         InkWell(
           overlayColor: MaterialStateProperty.all(AppColors.primary),
           onTap: () => context.goNamed('home'),
-          child: const AqwgTitle(titleString: 'AQWG'),
+          child: AqwgTitle(
+            titleString: 'AQWG',
+            textColor: tileDecoration,
+          ),
         ),
         const Divider(
           thickness: 0.5,

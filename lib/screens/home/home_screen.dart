@@ -19,9 +19,6 @@ class HomeScreen extends ConsumerWidget {
             builder: (context, snapshot) {
               if (!snapshot.hasData) return Container();
 
-              print(MediaQuery.sizeOf(context).height);
-              print(MediaQuery.sizeOf(context).width);
-
               final gridViewCenterPadding = constraints.maxWidth / 7;
               //? nao pergunta o pq, foi a unica coisa que funcionou
               final backgroundImage = snapshot.data;

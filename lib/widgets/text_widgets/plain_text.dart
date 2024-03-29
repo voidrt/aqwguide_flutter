@@ -9,11 +9,13 @@ class PlainText extends StatelessWidget {
     Key? key,
     this.isInParagraph = false,
     this.isSelectable = false,
+    this.textColor = AppColors.textWhite,
   }) : super(key: key);
 
   final bool isInParagraph;
   final bool isSelectable;
   final String string;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +26,18 @@ class PlainText extends StatelessWidget {
           ? SelectableText(
               string,
               textAlign: TextAlign.start,
-              style: Theme.of(context).textTheme.bodySmall,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodySmall!
+                  .copyWith(color: textColor),
             )
           : Text(
               string,
               textAlign: TextAlign.start,
-              style: Theme.of(context).textTheme.bodySmall,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodySmall!
+                  .copyWith(color: textColor),
             ),
     );
   }

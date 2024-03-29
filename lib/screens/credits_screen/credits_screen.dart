@@ -27,7 +27,8 @@ class CreditsScreen extends StatelessWidget {
         'Desolate',
         'Caustic',
         'Argleblarge',
-        'Itzem'
+        'Itzem',
+        'zocaneto'
       ],
     },
   ];
@@ -47,7 +48,7 @@ class CreditsScreen extends StatelessWidget {
               constraints: constraints,
             ),
             const SizedBox(
-              height: Paddings.extraBig,
+              height: Paddings.veryBig,
             ),
             ...List.generate(
               namesCreditList.length,

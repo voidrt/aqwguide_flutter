@@ -21,7 +21,7 @@ void main() {
 
   doWhenWindowReady(() {
     appWindow.title = 'AQW Guide';
-    appWindow.size = const Size(984, 561);
+    appWindow.size = const Size(1169, 641);
     appWindow.minSize = const Size(900, 480);
     appWindow.alignment = Alignment.center;
     appWindow.show();
