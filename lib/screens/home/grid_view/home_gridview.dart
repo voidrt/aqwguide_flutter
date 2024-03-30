@@ -41,7 +41,7 @@ class AlignedGrid extends ConsumerWidget {
 
     //? Sublisting because Home and Credits dont need to show up here
 
-    final widgetWidth =
+    final gridItemWidth =
         (constraints.maxWidth - mainAxisSpacing * (columns - 1)) / columns;
 
     return SingleChildScrollView(
@@ -55,7 +55,7 @@ class AlignedGrid extends ConsumerWidget {
             return GridViewItem(
               label: contentNames[index],
               widgetRoute: contentNames[index].toLowerCase(),
-              width: widgetWidth,
+              width: gridItemWidth,
             );
           },
         ),

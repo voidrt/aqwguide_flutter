@@ -4,10 +4,10 @@ class AppColors {
   static const primary = Color.fromARGB(255, 20, 20, 20);
   static const secondary = Color.fromARGB(255, 124, 109, 235);
   static const background = Color.fromARGB(255, 15, 15, 15);
-  static const textWhite = Color.fromARGB(255, 230, 220, 220);
+  static const textWhite = Color.fromARGB(255, 220, 220, 220);
   static const lightGrey = Color.fromARGB(255, 96, 95, 103);
-  static const darkGrey500 = Color.fromARGB(255, 24, 24, 24);
-  static const darkGrey1000 = Color(0xff222222);
+  static const darkGrey500 = Color.fromARGB(255, 15, 15, 15);
+  static const darkGrey1000 = Color.fromARGB(255, 20, 20, 20);
   static const black = Color.fromARGB(255, 20, 20, 20);
 
   static const healthRed = Color.fromARGB(255, 240, 10, 80);

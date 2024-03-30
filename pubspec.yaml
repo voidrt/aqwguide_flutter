@@ -18,6 +18,7 @@ dependencies:
   http: 
   url_launcher:
   bitsdojo_window:
+  easy_rich_text:
   random_image_selector:
     path: packages/random_image_selector
 
