@@ -23,13 +23,13 @@ class ParagraphCustom extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         vertical: Paddings.small,
-        horizontal: Paddings.defaultSize * indentLevel,
+        horizontal: Paddings.big * indentLevel,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            customBullet ?? '• ',
+            customBullet ?? '•  ',
             style: Theme.of(context).textTheme.bodySmall,
           ),
           Expanded(

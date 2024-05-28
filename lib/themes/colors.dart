@@ -17,4 +17,9 @@ class AppColors {
   static const repGreen = Color.fromARGB(255, 20, 150, 80);
   static const gold = Color.fromARGB(255, 227, 153, 0);
   static const adventureCoin = Color.fromARGB(255, 241, 187, 5);
+  static const legend = Color.fromARGB(255, 139, 20, 153);
+  static const pseudoRare = Color.fromARGB(255, 24, 207, 0);
+  static const specialOffer = Color.fromARGB(255, 245, 186, 26);
+  static const seasonal = Color.fromARGB(255, 255, 0, 102);
+  static const rare = Color.fromARGB(255, 50, 130, 11);
 }
